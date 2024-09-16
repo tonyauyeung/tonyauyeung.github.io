@@ -3,7 +3,7 @@
 title: Tony RuiKang OuYang
 
 # Name pronunciation (optional)
-# name_pronunciation: Chien Shiung Wu
+name_pronunciation: # Chien Shiung Wu
 
 # Full name (for SEO)
 first_name: RuiKang
@@ -25,7 +25,7 @@ role: MPhil student
 # Organizations/Affiliations to display in Biography blox
 organizations:
   - name: University of Cambridge
-    # url: https://openai.com/
+    url: # https://openai.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -162,4 +162,4 @@ work:
 
 ## About Me
 
-# Hi there 👋. I'm _Tony RuiKang OuYang_ (_歐陽瑞康_ in Chinese; _SeoiHong AuYeung_ pronounced in Cantonese). Recently, I completed my **MPhil in Machine Learning and Machine Intelligence** from the University of Cambridge, where my thesis focus on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org). My current research interests span generative models, neural samplers and their application to molecular generation. Generally, I'm interested in probabilistic machine learning and AI4S, espesially developping powerful, efficient and scalable methods that can applied to physics and molecular modeling.
+Hi there 👋. I'm _Tony RuiKang OuYang_ (_歐陽瑞康_ in Chinese; _SeoiHong AuYeung_ pronounced in Cantonese). Recently, I completed my **MPhil in Machine Learning and Machine Intelligence** from the University of Cambridge, where my thesis focus on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org). My current research interests span generative models, neural samplers and their application to molecular generation. Generally, I'm interested in probabilistic machine learning and AI4S, espesially developping powerful, efficient and scalable methods that can applied to physics and molecular modeling.
