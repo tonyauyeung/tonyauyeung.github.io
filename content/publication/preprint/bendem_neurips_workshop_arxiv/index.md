@@ -5,13 +5,14 @@ title: 'BEnDEM: A Boltzmann Sampler Based on Bootstrapped Denoising Energy Match
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
-  - '**Ruikang OuYang**\*'
-  - Bo Qiang*
+  - admin
+  - Bo Qiang
   - José Miguel Hernández-Lobato
 
 author_notes:
-  - '*Equal contribution'
-  - '*Equal contribution'
+  - 'Equal contribution'
+  - 'Equal contribution'
+  - ''
 
 date: 'Sun, 15 Sep 2024 16:41:30 UTC'
 doi: 'https://doi.org/10.48550/arXiv.2409.09787'
@@ -47,7 +48,7 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
+url_pdf: 'https://arxiv.org/pdf/2409.09787'
 url_code: ''
 url_dataset: ''
 url_poster: ''
