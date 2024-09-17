@@ -1,6 +1,6 @@
 ---
 title: Research Assistent - Graph Neural Networks
-summary: [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/), the Alan Turing Institute & Department of Statistics, University of Oxford
+summary: Prof. Gesine Reinert, the Alan Turing Institute & Department of Statistics, University of Oxford
 date: 'Apr 2022 - Jul 2022'
 ---
 
