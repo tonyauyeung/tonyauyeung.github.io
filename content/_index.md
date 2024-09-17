@@ -1,6 +1,6 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ""
+title: "Tony's Homepage"
 date: 2024-9-17
 type: landing
 
@@ -67,7 +67,7 @@ sections:
   - block: experience
     id: experience
     content:
-      title: Experience
+      title: My Experience
       # Date format for experience
       #   Refer to https://wowchemy.com/docs/customization/#date-format
       date_format: Jan 2006
