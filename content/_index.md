@@ -53,7 +53,7 @@ sections:
         exclude_featured: false
     design:
       view: citation
-      columns: '1'
+      columns: '2'
   - block: experience
     id: experience
     content:
