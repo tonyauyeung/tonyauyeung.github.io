@@ -60,7 +60,7 @@ education:
     date_start: 2023-10-01
     date_end: 2024-08-31
     summary: |
-      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org/).
+      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by Prof. José Miguel Hernández-Lobato (https://jmhl.org/).
     button:
       text: 'Read Thesis'
       url: ''
@@ -70,7 +70,7 @@ education:
     date_start: 2022-01-12
     date_end: 2022-07-31
     summary: |
-      I was affiliated with [St.Peter's College](https://www.spc.ox.ac.uk/) and [Department of Statistics](https://www.stats.ox.ac.uk/). I acknowledge the full-funding provided by HITsz.
+      I was affiliated with St.Peter's College and Department of Statistics. I acknowledge the full-funding provided by HITsz.
 
   - area: BEng in Data Science
     institution: Harbin Institute of Technology, shenzhen
@@ -87,7 +87,7 @@ work:
     date_start: 2022-04-01
     date_end: 2022-07-31
     summary: |
-      Research about scalable Graph Neural Network, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/).
+      Research about scalable Graph Neural Network, supervised by Prof. Gesine Reinert.
 
 
 # Skills
@@ -150,12 +150,15 @@ skills:
         description: ''
         percent: 70
         # icon: cat
+      - name: always exploring
+        description: ''
+        percent: 50
 
 languages:
   - name: English
     percent: 90
   - name: Cantonese
-    percent: 10000
+    percent: 1000
   - name: Chinese
     percent: 100
   - name: French
