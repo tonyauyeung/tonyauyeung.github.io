@@ -59,8 +59,8 @@ education:
     institution: University of Cambridge
     date_start: 2023-10-01
     date_end: 2024-08-31
-    description: |
-      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org).
+    summary: |
+      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org/).
     button:
       text: 'Read Thesis'
       url: ''
@@ -69,7 +69,7 @@ education:
     institution: University of Oxford
     date_start: 2022-01-12
     date_end: 2022-07-31
-    description: |
+    summary: |
       I was affiliated with [St.Peter's College](https://www.spc.ox.ac.uk/) and [Department of Statistics](https://www.stats.ox.ac.uk/). I acknowledge the full-funding provided by HITsz.
 
   - area: BEng in Data Science
@@ -86,7 +86,7 @@ work:
     company_logo: Alan_Turing_Institute_logo
     date_start: 2022-04-01
     date_end: 2022-07-31
-    description: |
+    summary: |
       Research about scalable Graph Neural Network, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/).
 
 
@@ -107,7 +107,7 @@ skills:
   #       description: ''
   #       percent: 40
   #       icon: circle-stack
-  - name: Hobbies
+  - name: ❤️❤️❤️
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
@@ -119,17 +119,16 @@ skills:
         description: ''
         percent: 100
         # icon: cat
-      - name: 🥊 Boxing
+      - name: ✈️ Traveling
         description: ''
-        percent: 70
-        # icon: cat
+        percent: 100
+  - name: ❤️❤️
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
       - name: 🏂 Snowboarding
         description: ''
         percent: 100
-        # icon: camera
-      - name: 🏄 Surfing
-        description: ''
-        percent: 80
         # icon: camera
       - name: 🤿 Diving
         description: ''
@@ -138,10 +137,19 @@ skills:
       - name: 📷 Photography
         description: ''
         percent: 100
+  - name: ❤️
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: 🏄 Surfing
+        description: ''
+        percent: 80
         # icon: camera
-      - name: ✈️ Traveling
-    design:
-      columns: '3'
+        # icon: camera
+      - name: 🥊 Boxing
+        description: ''
+        percent: 70
+        # icon: cat
 
 languages:
   - name: English
