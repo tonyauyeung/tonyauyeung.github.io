@@ -53,27 +53,17 @@ sections:
   #   design:
   #     view: article-grid
   #     columns: 1
-  # - block: collection
-  #   id: papers
-  #   content:
-  #     title: Publications
-  #     text: ""
-  #     filters:
-  #       folders:
-  #         - publication
-  #       exclude_featured: false
-  #   design:
-  #     view: citation
-  - block: custom-publications
+  - block: collection
     id: papers
     content:
       title: Publications
+      text: ""
       filters:
         folders:
           - publication
+        exclude_featured: false
     design:
-      columns: '2'
-      view: custom-publications
+      view: citation
   - block: collection
     id: experience
     content: 
