@@ -66,6 +66,16 @@ sections:
       view: citation
   - block: resume-experience
     id: experience
+    content:
+      username: admin
+    design:
+      # Hugo date format
+      date_format: 'January 2006'
+      # Education or Experience section first?
+      filter:
+        exclude_types: 
+          - education
+      is_education_first: false
 
   # - block: collection
   #   id: talks
