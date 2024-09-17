@@ -86,11 +86,3 @@ Create your slides in Markdown - click the _Slides_ button to check out the exam
 {{% /callout %}}
 
 Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
-
----
-title: Publications
-view: 2
-publication_type: ""
-date_format: "January 2, 2006"
-bibfile: "publication/publications.bib"
----
