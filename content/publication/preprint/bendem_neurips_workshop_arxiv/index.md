@@ -5,8 +5,8 @@ title: 'BEnDEM: A Boltzmann Sampler Based on Bootstrapped Denoising Energy Match
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
-  - '**_Ruikang Ouyang_*'
-  - '**Bo Qiang_*'
+  - admin*
+  - Bo Qiang*
   - José Miguel Hernández-Lobato
 
 author_notes:
