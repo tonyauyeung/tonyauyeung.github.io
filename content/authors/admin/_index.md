@@ -52,39 +52,50 @@ interests:
   - Neural Sampler
   - AI4S
 
+# education:
+#   - area: MPhil in Machine Learning and Machine Intelligence
+#     institution: University of Cambridge
+#     date_start: 2023-10-01
+#     date_end: 2024-08-31
+#     summary: |
+#       Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org)
+#     button:
+#       text: 'Read Thesis'
+#       url: ''
+
+#   - area: Visiting student in Mathematics and Statistics
+#     institution: University of Oxford
+#     date_start: 2022-01-12
+#     date_end: 2022-07-31
+#     summary: |
+#       fully funded by HITsz
+#   - area: BEng in Data Science
+#     institution: Harbin Institute of Technology, shenzhen
+#     date_start: 2019-09-01
+#     date_end: 2023-06-30
+#     summary: |
+#       GPA: 90/100
 education:
-  - area: MPhil in Machine Learning and Machine Intelligence
+  courses:
+  - course: MPhil in Machine Learning and Machine Intelligence
     institution: University of Cambridge
-    date_start: 2023-10-01
-    date_end: 2024-08-31
-    summary: |
-      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org)
-    button:
-      text: 'Read Thesis'
-      url: ''
-
-  - area: Visiting student in Mathematics and Statistics
+    year: 2023-Present
+  - course: Visiting student in Mathematics and Statistics
     institution: University of Oxford
-    date_start: 2022-01-12
-    date_end: 2022-07-31
-    summary: |
-      fully funded by HITsz
-  - area: BEng in Data Science
-    institution: Harbin Institute of Technology, shenzhen
-    date_start: 2019-09-01
-    date_end: 2023-06-30
-    summary: |
-      GPA: 90/100
+    year: 2022/01-2022/07
+  - course: BEng in Data Science
+    institution: Harbin Institute of Technology, Shenzhen
+    year: 2019-2023
 
-work:
-  - position: Research Assistant
-    company_name: The Alan Turing Institute
-    company_url: ''
-    company_logo: ''
-    date_start: 2022-04-01
-    date_end: 2022-07-31
-    summary: |2-
-      Research about scalable Graph Neural Network
+# work:
+#   - position: Research Assistant
+#     company_name: The Alan Turing Institute
+#     company_url: ''
+#     company_logo: ''
+#     date_start: 2022-04-01
+#     date_end: 2022-07-31
+#     summary: |2-
+#       Research about scalable Graph Neural Network
 
 
 # # Skills
