@@ -52,12 +52,12 @@ sections:
           - publication
         exclude_featured: false
     design:
-      view: compact
+      view: citation
       columns: '1'
-  # - block: experience
-  #   id: experience
-  #   content:
-  #     title: My Experience
+  - block: word
+    id: experience
+    content:
+      title: Experience
   #     # Date format for experience
   #     #   Refer to https://wowchemy.com/docs/customization/#date-format
   #     date_format: Jan 2006
