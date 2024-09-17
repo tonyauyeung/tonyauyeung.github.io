@@ -58,7 +58,7 @@ education:
   - area: MPhil in Machine Learning and Machine Intelligence
     institution: University of Cambridge
     date_start: 2023-10-01
-    date_end: ''
+    date_end: 2024-08-31
     summary: |
       Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org).
     button:
