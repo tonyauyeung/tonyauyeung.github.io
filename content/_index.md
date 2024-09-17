@@ -72,7 +72,7 @@ sections:
         folders:
           - experience
     design:
-      view: article-grid
+      view: showcase
   # - block: collection
   #   id: talks
   #   content:
