@@ -64,7 +64,7 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  - block: experience
+  - id: experience
     widget: experience
     headless: true  # This file represents a page section.
 
