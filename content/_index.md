@@ -64,7 +64,7 @@ sections:
   #       exclude_featured: false
   #   design:
   #     view: citation
-  - block: custom
+  - block: custom-publications
     id: papers
     content:
       title: Publications
