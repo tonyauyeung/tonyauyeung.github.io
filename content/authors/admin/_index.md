@@ -75,17 +75,17 @@ interests:
 #     date_end: 2023-06-30
 #     summary: |
 #       GPA: 90/100
-education:
-  courses:
-  - course: MPhil in Machine Learning and Machine Intelligence
-    institution: University of Cambridge
-    year: 2023-Present
-  - course: Visiting student in Mathematics and Statistics
-    institution: University of Oxford
-    year: 2022/01-2022/07
-  - course: BEng in Data Science
-    institution: Harbin Institute of Technology, Shenzhen
-    year: 2019-2023
+# education:
+#   courses:
+#   - course: MPhil in Machine Learning and Machine Intelligence
+#     institution: University of Cambridge
+#     year: 2023-Present
+#   - course: Visiting student in Mathematics and Statistics
+#     institution: University of Oxford
+#     year: 2022/01-2022/07
+#   - course: BEng in Data Science
+#     institution: Harbin Institute of Technology, Shenzhen
+#     year: 2019-2023
 
 # work:
 #   - position: Research Assistant
