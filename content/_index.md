@@ -65,6 +65,11 @@ sections:
     design:
       view: citation
   # - block: collection
+  #   id: experience
+  #   content: 
+  #     title: Experience
+
+  # - block: collection
   #   id: talks
   #   content:
   #     title: Recent & Upcoming Talks

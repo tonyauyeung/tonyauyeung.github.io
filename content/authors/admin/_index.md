@@ -43,11 +43,12 @@ profiles:
     url: https://linkedin.com/in/seoihong-auyeung-225845235
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=8G4PuYoAAAAJ&hl=en
-  # - icon: academicons/orcid
-  #   url: https://orcid.org/
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0004-1862-330X
 
 interests:
   - Probabilistic Machine Learning
+  - Generative Models
   - Neural Sampler
   - AI4S
 
