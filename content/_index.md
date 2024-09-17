@@ -71,45 +71,46 @@ sections:
   #   design:
   #     view: article-grid
   #     columns: 1
-  # - block: collection
-  #   id: news
-  #   content:
-  #     title: Recent News
-  #     subtitle: ''
-  #     text: ''
-  #     # Page type to display. E.g. post, talk, publication...
-  #     page_type: post
-  #     # Choose how many pages you would like to display (0 = all pages)
-  #     count: 5
-  #     # Filter on criteria
-  #     filters:
-  #       author: ""
-  #       category: ""
-  #       tag: ""
-  #       exclude_featured: false
-  #       exclude_future: false
-  #       exclude_past: false
-  #       publication_type: ""
-  #     # Choose how many pages you would like to offset by
-  #     offset: 0
-  #     # Page order: descending (desc) or ascending (asc) date.
-  #     order: desc
-  #   design:
-  #     # Choose a layout view
-  #     view: date-title-summary
-  #     # Reduce spacing
-  #     spacing:
-  #       padding: [0, 0, 0, 0]
-  - block: markdown
+  - block: collection
     id: news
     content:
-      title: "News"
-      subtitle: ""
-      text: |-
-        * [June 2023] I graduated from HITsz with Bacholar of Engineering in _Data Science_, with disctinction.
-        * [Apr 2022] I started a position of Research Assistant in the Alan Turing Institute, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/) and working on GNNs.
-        * [January 2022] I started visiting in the University of Oxford, studying _Mathematics and Statistics_
-    # design:
+      title: Recent News
+      subtitle: ''
+      text: ''
+      # Page type to display. E.g. post, talk, publication...
+      page_type: post
+      # Choose how many pages you would like to display (0 = all pages)
+      count: 5
+      # Filter on criteria
+      filters:
+        author: ""
+        category: ""
+        tag: ""
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+        publication_type: ""
+      # Choose how many pages you would like to offset by
+      offset: 0
+      # Page order: descending (desc) or ascending (asc) date.
+      order: desc
+    design:
+      # Choose a layout view
+      view: date-title-summary
+      # Reduce spacing
+      spacing:
+        padding: [0, 0, 0, 0]
+  # - block: markdown
+  #   id: news
+  #   content:
+  #     title: "News"
+  #     subtitle: ""
+  #     text: |-
+  #       * [June 2023] I graduated from HITsz with Bacholar of Engineering in _Data Science_, with disctinction.
+  #       * [Apr 2022] I started a position of Research Assistant in the Alan Turing Institute, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/) and working on GNNs.
+  #       * [January 2022] I started visiting in the University of Oxford, studying _Mathematics and Statistics_
+
+# design:
     #   columns: '2'
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
@@ -132,25 +133,25 @@ sections:
         css_class: "bg-primary-700"
         css_style: ""
 
-  - block: contact
-    id: contact
-    content:
-      title: Contact
-      subtitle:
-      text: 
-      # Contact (add or remove contact options as necessary)
-      email: ro352@cam.ac.uk
-      # phone: 888 888 88 88
-      address:
-        street: 'Department of Engineering, Trumpington Street'
-        city: Cambridge
-        # region: 
-        postcode: CB2 1PZ
-        country: United Kingdom
-        country_code: UK
-      # coordinates:
-      #   latitude: '43.307205'
-      #   longitude: '-2.010843'
-    design:
-      columns: '2'
+  # - block: contact
+  #   id: contact
+  #   content:
+  #     title: Contact
+  #     subtitle:
+  #     text: 
+  #     # Contact (add or remove contact options as necessary)
+  #     email: ro352@cam.ac.uk
+  #     # phone: 888 888 88 88
+  #     address:
+  #       street: 'Department of Engineering, Trumpington Street'
+  #       city: Cambridge
+  #       # region: 
+  #       postcode: CB2 1PZ
+  #       country: United Kingdom
+  #       country_code: UK
+  #     # coordinates:
+  #     #   latitude: '43.307205'
+  #     #   longitude: '-2.010843'
+  #   design:
+  #     columns: '2'
 ---
