@@ -64,7 +64,7 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  - block:
+  - block: resume-experience
     widget: experience
     headless: true  # This file represents a page section.
 
