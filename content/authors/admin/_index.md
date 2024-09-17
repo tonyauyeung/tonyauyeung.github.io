@@ -11,7 +11,7 @@ last_name: OuYang
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: ⚽️
 
 # Is this the primary user of the site?
 superuser: true
@@ -58,9 +58,9 @@ education:
   - area: MPhil in Machine Learning and Machine Intelligence
     institution: University of Cambridge
     date_start: 2023-10-01
-    date_end: 2024-08-31
+    date_end: ''
     summary: |
-      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by Prof. José Miguel Hernández-Lobato (https://jmhl.org/).
+      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by Prof. José Miguel Hernández-Lobato.
     button:
       text: 'Read Thesis'
       url: ''

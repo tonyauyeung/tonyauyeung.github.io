@@ -131,4 +131,26 @@ sections:
         # Card background color (CSS class)
         css_class: "bg-primary-700"
         css_style: ""
+
+  - block: contact
+    id: contact
+    content:
+      title: Contact
+      subtitle:
+      text: 
+      # Contact (add or remove contact options as necessary)
+      email: ro352@cam.ac.uk
+      # phone: 888 888 88 88
+      address:
+        street: 'Department of Engineering, Trumpington Street'
+        city: Cambridge
+        # region: 
+        postcode: CB2 1PZ
+        country: United Kingdom
+        country_code: UK
+      # coordinates:
+      #   latitude: '43.307205'
+      #   longitude: '-2.010843'
+    design:
+      columns: '2'
 ---
