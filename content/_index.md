@@ -59,7 +59,7 @@ sections:
 
     design:
       view: citation
-      columns: '2'
+      columns: '1'
 
   # - block: collection
   #   id: talks
