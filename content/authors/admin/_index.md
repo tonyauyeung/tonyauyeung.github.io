@@ -111,18 +111,37 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: ⚽️ Football
         description: ''
-        percent: 60
-        icon: 'person-simple-walk'
-      - name: Cats
+        percent: 100000
+        # icon: 'person-simple-walk'
+      - name: 🏋️ Fitness
         description: ''
         percent: 100
-        icon: cat
-      - name: Photography
+        # icon: cat
+      - name: 🥊 Boxing
+        description: ''
+        percent: 70
+        # icon: cat
+      - name: 🏂 Snowboarding
+        description: ''
+        percent: 100
+        # icon: camera
+      - name: 🏄 Surfing
         description: ''
         percent: 80
-        icon: camera
+        # icon: camera
+      - name: 🤿 Diving
+        description: ''
+        percent: 100
+        # icon: camera
+      - name: 📷 Photography
+        description: ''
+        percent: 100
+        # icon: camera
+      - name: ✈️ Traveling
+    design:
+      columns: '3'
 
 languages:
   - name: English
