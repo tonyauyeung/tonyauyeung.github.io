@@ -6,7 +6,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: "6rem"
+  spacing: "4rem"
 
 sections:
   - block: resume-biography-3
@@ -42,17 +42,6 @@ sections:
   #       Please reach out to collaborate 😃
   #   design:
   #     columns: '1'
-  # - block: collection
-  #   id: papers
-  #   content:
-  #     title: Selected Publications
-  #     filters:
-  #       folders:
-  #         - publication
-  #       featured_only: true
-  #   design:
-  #     view: article-grid
-  #     columns: 1
   - block: collection
     id: papers
     content:
@@ -65,7 +54,7 @@ sections:
     design:
       view: citation
   - block: experience
-    id: experience
+    # id: experience
     content:
       title: My Experience
       # Date format for experience
