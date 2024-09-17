@@ -64,13 +64,12 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  - block: collection
-    id: experience
-    content: 
-      title: Experience
-      filters:
-        folders:
-          - experience
+  - block: resume-experience
+    content:
+      username: admin
+    design:
+      # Hugo date format
+      date_format: 'January 2006'
   # - block: collection
   #   id: talks
   #   content:
