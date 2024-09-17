@@ -59,7 +59,7 @@ education:
     institution: University of Cambridge
     date_start: 2023-10-01
     date_end: 2024-08-31
-    summary: |
+    description: |
       Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org).
     button:
       text: 'Read Thesis'
@@ -69,7 +69,7 @@ education:
     institution: University of Oxford
     date_start: 2022-01-12
     date_end: 2022-07-31
-    summary: |
+    description: |
       I was affiliated with [St.Peter's College](https://www.spc.ox.ac.uk/) and [Department of Statistics](https://www.stats.ox.ac.uk/). I acknowledge the full-funding provided by HITsz.
 
   - area: BEng in Data Science
@@ -86,27 +86,27 @@ work:
     company_logo: Alan_Turing_Institute_logo
     date_start: 2022-04-01
     date_end: 2022-07-31
-    summary:
+    description: |
       Research about scalable Graph Neural Network, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/).
 
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
-    items:
-      - name: Python
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
+  # - name: Technical Skills
+  #   items:
+  #     - name: Python
+  #       description: ''
+  #       percent: 80
+  #       icon: code-bracket
+  #     - name: Data Science
+  #       description: ''
+  #       percent: 100
+  #       icon: chart-bar
+  #     - name: SQL
+  #       description: ''
+  #       percent: 40
+  #       icon: circle-stack
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -114,7 +114,7 @@ skills:
       - name: Hiking
         description: ''
         percent: 60
-        icon: person-simple-walk
+        icon: 'person-simple-walk'
       - name: Cats
         description: ''
         percent: 100
@@ -126,11 +126,13 @@ skills:
 
 languages:
   - name: English
-    percent: 100
+    percent: 90
+  - name: Cantonese
+    percent: 10000
   - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+    percent: 100
+  - name: French
+    percent: 10
 
 # Awards.
 #   Add/remove as many awards below as you like.
