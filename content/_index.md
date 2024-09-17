@@ -54,7 +54,7 @@ sections:
     design:
       view: citation
       columns: '1'
-  - block: work
+  - block: experience
     id: experience
     content:
       title: Experience
