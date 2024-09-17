@@ -117,7 +117,7 @@ sections:
     content:
       title: "News"
       subtitle: ""
-      text: |
+      text: |-
         {{< rawhtml >}}
         {{ readFile "/content/news.md" | markdownify }}
         {{< /rawhtml >}}
