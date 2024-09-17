@@ -71,8 +71,6 @@ sections:
       filters:
         folders:
           - experience
-    design:
-      view: showcase
   # - block: collection
   #   id: talks
   #   content:
