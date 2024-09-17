@@ -112,16 +112,16 @@ sections:
   #     # Reduce spacing
   #     spacing:
   #       padding: [0, 0, 0, 0]
-  - block: markdown
-    content:
-      title: "News"
-      subtitle: ""
-      text: |
-        {{< rawhtml >}}
-        {{ readFile "/content/news.md" | markdownify }}
-        {{< /rawhtml >}}
-    design:
-      columns: '2'
+  # - block: markdown
+  #   content:
+  #     title: "News"
+  #     subtitle: ""
+  #     text: |
+  #       {{< rawhtml >}}
+  #       {{ readFile "/content/news.md" | markdownify }}
+  #       {{< /rawhtml >}}
+  #   design:
+  #     columns: '2'
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
     content:
