@@ -18,7 +18,7 @@ date: '2023/11/28'
 doi: 'https://link.springer.com/chapter/10.1007/978-3-031-53468-3_34'
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2024-09-17'
+publishDate: '2023-11-28'
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
