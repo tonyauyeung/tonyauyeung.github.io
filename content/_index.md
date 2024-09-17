@@ -64,6 +64,7 @@ sections:
         exclude_featured: false
     design:
       view: citation
+      position: left
   - block: collection
     id: experience
     content: 

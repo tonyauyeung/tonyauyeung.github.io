@@ -1,4 +1,4 @@
 ---
-title: Blog
+title: Experience
 view: article-grid
 ---
