@@ -64,11 +64,15 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  # - block: collection
-  #   id: experience
-  #   content: 
-  #     title: Experience
-
+  - block: collection
+    id: experience
+    content: 
+      title: Experience
+      filters:
+        folders:
+          - experience
+    design:
+      view: article-grid
   # - block: collection
   #   id: talks
   #   content:
