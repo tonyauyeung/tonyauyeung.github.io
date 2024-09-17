@@ -49,8 +49,10 @@ profiles:
 interests:
   - Probabilistic Machine Learning
   - Generative Models
+  - Sampling Methods
   - Neural Sampler
   - AI4S
+  - Geometric Deep Learning
 
 education:
   - area: MPhil in Machine Learning and Machine Intelligence
@@ -69,6 +71,7 @@ education:
     date_end: 2022-07-31
     summary: |
       fully funded by HITsz
+
   - area: BEng in Data Science
     institution: Harbin Institute of Technology, shenzhen
     date_start: 2019-09-01
@@ -87,8 +90,8 @@ work:
       Research about scalable Graph Neural Network
 
 
-# Skills
-# Add your own SVG icons to `assets/media/icons/`
+## Skills
+## Add your own SVG icons to `assets/media/icons/`
 # skills:
   # - name: Technical Skills
   #   items:
