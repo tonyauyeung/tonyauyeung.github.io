@@ -1,5 +1,5 @@
 ---
-title: 📖 I start MPhil in Machine Learning and Machine Intelligence (MLMI) at the University of Cambridge.
+title: 📖 I started MPhil in Machine Learning and Machine Intelligence at the University of Cambridge.
 date: 2023-10-01
 authors:
   - admin

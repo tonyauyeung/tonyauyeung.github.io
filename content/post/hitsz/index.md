@@ -1,5 +1,5 @@
 ---
-title: 🎓 I've graduated from HITsz.
+title: 🎓 I graduated from Harbin Institute of Technology, Shenzhen.
 date: 2023-06-30
 authors:
   - admin

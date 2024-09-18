@@ -1,5 +1,5 @@
 ---
-title: 🎉 I start a position as Research Assistant at the Alan Turing Institute
+title: 🎉 I started a position as Research Assistant at the Alan Turing Institute
 authors:
   - admin
 date: 2022-04-01
