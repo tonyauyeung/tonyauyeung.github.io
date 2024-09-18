@@ -8,12 +8,11 @@ date: 2023-10-27
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 
-# authors:
-#   - admin
-#   - Ted
+authors:
+  # - admin
+  # - Ted
 
 tags:
-  - Academic
   - Hugo Blox
   - Markdown
 ---

@@ -3,5 +3,7 @@ title: 📖 I start MPhil in Machine Learning and Machine Intelligence (MLMI) at
 date: 2023-10-01
 authors:
   - admin
+tags:
+  - News
 summary: I am affiliated with Department of Engineering and Wolfson College, and advised by __Prof. José Miguel Hernández-Lobato__.
 ---
