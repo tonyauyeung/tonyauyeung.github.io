@@ -97,15 +97,15 @@ sections:
           link: 'https://zoom.com'
       # Automatically link email and phone or display them just as text?
       autolink: true
-      # Choose an email form provider (netlify/formspree)
-      form:
-        provider: netlify
-        formspree:
-          # If using Formspree, enter your Formspree form ID
-          id: ''
-        netlify:
-          # Enable CAPTCHA challenge to reduce spam?
-          captcha: false
+      # # Choose an email form provider (netlify/formspree)
+      # form:
+      #   provider: netlify
+      #   formspree:
+      #     # If using Formspree, enter your Formspree form ID
+      #     id: ''
+      #   netlify:
+      #     # Enable CAPTCHA challenge to reduce spam?
+      #     captcha: false
       # Coordinates to display a map - set your map provider in `params.yaml`
       coordinates:
         latitude: '37.4275'
