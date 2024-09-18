@@ -10,18 +10,18 @@ main:
   - name: Publications
     url: /#papers
     weight: 11
-  - name: Experience
-    url: experience/
-    weight: 12
-  - name: Adwards
-    url: /#adwards
-    weight: 13
   - name: News
     url: /#news
     weight: 14
-  # - name: Contact
-  #   url: /#contact
-  #   weight: 20
+  - name: Experience
+    url: experience/
+    weight: 12
+  # - name: Adwards
+  #   url: /#adwards
+  #   weight: 13
+  - name: Contact
+    url: /#contact
+    weight: 20
   # - name: Projects
   #   url: projects/
   #   weight: 30

@@ -61,6 +61,59 @@ sections:
       view: citation
       columns: '1'
 
+- block: contact
+    id: contact
+    content:
+      title: Contact
+      subtitle: ''
+      text: ''
+      # Contact details - edit or remove options as needed
+      email: test@example.org
+      phone: 888 888 88 88
+      appointment_url: 'https://calendly.com'
+      address:
+        street: 450 Serra Mall
+        city: Stanford
+        region: CA
+        postcode: '94305'
+        country: United States
+        country_code: US
+      directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+      office_hours:
+        - 'Monday 10:00 to 13:00'
+        - 'Wednesday 09:00 to 10:00'
+      contact_links:
+        - icon: twitter
+          icon_pack: fab
+          name: DM Me
+          link: 'https://twitter.com/Twitter'
+        - icon: skype
+          icon_pack: fab
+          name: Skype Me
+          link: 'skype:echo123?call'
+        - icon: video
+          icon_pack: fas
+          name: Zoom Me
+          link: 'https://zoom.com'
+      # Automatically link email and phone or display them just as text?
+      autolink: true
+      # Choose an email form provider (netlify/formspree)
+      form:
+        provider: netlify
+        formspree:
+          # If using Formspree, enter your Formspree form ID
+          id: ''
+        netlify:
+          # Enable CAPTCHA challenge to reduce spam?
+          captcha: false
+      # Coordinates to display a map - set your map provider in `params.yaml`
+      coordinates:
+        latitude: '37.4275'
+        longitude: '-122.1697'
+    design:
+      # Choose how many columns the section has. Valid values: '1' or '2'.
+      columns: '1'
+
   # - block: collection
   #   id: talks
   #   content:
@@ -71,35 +124,35 @@ sections:
   #   design:
   #     view: article-grid
   #     columns: 1
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: post
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: date-title-summary
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
+  # - block: collection
+  #   id: news
+  #   content:
+  #     title: Recent News
+  #     subtitle: ''
+  #     text: ''
+  #     # Page type to display. E.g. post, talk, publication...
+  #     # page_type: post
+  #     # Choose how many pages you would like to display (0 = all pages)
+  #     count: 5
+  #     # Filter on criteria
+  #     filters:
+  #       author: ""
+  #       category: ""
+  #       tag: ""
+  #       exclude_featured: false
+  #       exclude_future: false
+  #       exclude_past: false
+  #       publication_type: ""
+  #     # Choose how many pages you would like to offset by
+  #     offset: 0
+  #     # Page order: descending (desc) or ascending (asc) date.
+  #     order: desc
+  #   design:
+  #     # Choose a layout view
+  #     view: date-title-summary
+  #     # Reduce spacing
+  #     spacing:
+  #       padding: [0, 0, 0, 0]
   # - block: markdown
   #   id: news
   #   content:

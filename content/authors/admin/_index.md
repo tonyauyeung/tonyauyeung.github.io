@@ -51,7 +51,7 @@ interests:
   - Generative Models
   - Sampling Methods
   - Neural Sampler
-  - AI4S
+  - AI4S (physics & biochem, etc.)
   - Geometric Deep Learning
 
 education:
