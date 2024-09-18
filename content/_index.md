@@ -72,7 +72,7 @@ sections:
   #     view: article-grid
   #     columns: 1
 
-- block: collection
+  - block: collection
     id: news
     content:
       title: Recent News
