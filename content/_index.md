@@ -71,45 +71,46 @@ sections:
   #   design:
   #     view: article-grid
   #     columns: 1
-  # - block: collection
-  #   id: news
-  #   content:
-  #     title: Recent News
-  #     subtitle: ''
-  #     text: ''
-  #     # Page type to display. E.g. post, talk, publication...
-  #     # page_type: post
-  #     # Choose how many pages you would like to display (0 = all pages)
-  #     count: 5
-  #     # Filter on criteria
-  #     filters:
-  #       author: ""
-  #       category: ""
-  #       tag: ""
-  #       exclude_featured: false
-  #       exclude_future: false
-  #       exclude_past: false
-  #       publication_type: ""
-  #     # Choose how many pages you would like to offset by
-  #     offset: 0
-  #     # Page order: descending (desc) or ascending (asc) date.
-  #     order: desc
-  #   design:
-  #     # Choose a layout view
-  #     view: date-title-summary
-  #     # Reduce spacing
-  #     spacing:
-  #       padding: [0, 0, 0, 0]
-  - block: markdown
+
+- block: collection
     id: news
     content:
-      title: "News"
-      subtitle: ""
-      text: |-
-        * [October 2023] I started **MPhil in Machine Learning and Machine Intelligence** at _University of Cambridge_ and affiliated with _Wolfson College_, 
-        * [June 2023] I graduated from _HITsz_ with **Bachelor of Engineering in Data Science**, with distinction.
-        * [April 2022] I started a position as **Research Assistant** at the _Alan Turing Institute_, supervised by __Prof. Gesine Reinert__ and working on GNNs.
-        * [January 2022] I started visiting the _University of Oxford_, studying **Mathematics and Statistics** and affiliated with _St.Peter's College_.
+      title: Recent News
+      subtitle: ''
+      text: ''
+      # Page type to display. E.g. post, talk, publication...
+      # page_type: post
+      # Choose how many pages you would like to display (0 = all pages)
+      count: 5
+      # Filter on criteria
+      filters:
+        author: ""
+        category: ""
+        tag: ""
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+        publication_type: ""
+      # Choose how many pages you would like to offset by
+      offset: 0
+      # Page order: descending (desc) or ascending (asc) date.
+      order: desc
+    design:
+      # Choose a layout view
+      view: date-title-summary
+      # Reduce spacing
+      spacing:
+        padding: [0, 0, 0, 0]
+  # - block: markdown
+  #   id: news
+  #   content:
+  #     title: "News"
+  #     subtitle: ""
+  #     text: |-
+  #       * [October 2023] I started **MPhil in Machine Learning and Machine Intelligence** at _University of Cambridge_ and affiliated with _Wolfson College_.
+  #       * [June 2023] I graduated from _HITsz_ with **Bachelor of Engineering in Data Science**, with distinction.
+  #       * [April 2022] I started a position as **Research Assistant** at the _Alan Turing Institute_, supervised by __Prof. Gesine Reinert__ and working on GNNs.
+  #       * [January 2022] I started visiting the _University of Oxford_, studying **Mathematics and Statistics** and affiliated with _St.Peter's College_.
 
 # design:
     #   columns: '2'
