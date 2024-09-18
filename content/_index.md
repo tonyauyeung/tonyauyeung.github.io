@@ -42,6 +42,24 @@ sections:
   #       Please reach out to collaborate 😃
   #   design:
   #     columns: '1'
+  - block: collection
+    id: papers
+    content:
+      title: Publications
+      text: ""
+      filters:
+        folders:
+          - publication
+        exclude_featured: false
+      count: 0
+      # Choose how many pages you would like to offset by
+      offset: 0
+      # Page order: descending (desc) or ascending (asc) date.
+      order: desc
+
+    design:
+      view: citation
+      columns: '1'
 
   # - block: collection
   #   id: talks
@@ -82,15 +100,17 @@ sections:
   #     # Reduce spacing
   #     spacing:
   #       padding: [0, 0, 0, 0]
-  # - block: markdown
-  #   id: news
-  #   content:
-  #     title: "News"
-  #     subtitle: ""
-  #     text: |-
-  #       * [June 2023] I graduated from HITsz with Bacholar of Engineering in _Data Science_, with disctinction.
-  #       * [Apr 2022] I started a position of Research Assistant in the Alan Turing Institute, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/) and working on GNNs.
-  #       * [January 2022] I started visiting in the University of Oxford, studying _Mathematics and Statistics_
+  - block: markdown
+    id: news
+    content:
+      title: "News"
+      subtitle: ""
+      text: |-
+      <small>
+        * [June 2023] I graduated from HITsz with Bacholar of Engineering in _Data Science_, with disctinction.
+        * [Apr 2022] I started a position of Research Assistant in the Alan Turing Institute, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/) and working on GNNs.
+        * [January 2022] I started visiting in the University of Oxford, studying _Mathematics and Statistics_
+      </small>
 
 # design:
     #   columns: '2'
