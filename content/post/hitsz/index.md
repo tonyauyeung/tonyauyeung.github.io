@@ -1,4 +1,7 @@
 ---
-title: 🎓 I'm graduating from **HITsz** with Bacholar of Engineering, with disctinction.
+title: 🎓 I'm graduating from HITsz.
 date: 2023-06-30
+authors:
+  - admin
+summary: I received a Bachelor of Engineering with distinction.
 ---
