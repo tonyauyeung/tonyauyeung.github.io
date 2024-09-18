@@ -13,9 +13,12 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
+    # org_name: Ruikang OuYang
+    # description: 'Tony Ruikang OuYang's homepage.'
+    # twitter: 'tonyauyeung'
     org_name: ''
-    description: 'Tony Ruikang OuYang's homepage.'
-    twitter: 'tonyauyeung'
+    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
+    twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
