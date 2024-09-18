@@ -106,9 +106,10 @@ sections:
       title: "News"
       subtitle: ""
       text: |-
-        * [June 2023] I graduated from HITsz with Bacholar of Engineering in _Data Science_, with disctinction.
-        * [Apr 2022] I started a position of Research Assistant in the Alan Turing Institute, supervised by [Prof. Gesine Reinert](https://www.stats.ox.ac.uk/~reinert/) and working on GNNs.
-        * [January 2022] I started visiting in the University of Oxford, studying _Mathematics and Statistics_
+        * [October 2023] 📖 I started **MPhil in Machine Learning and Machine Intelligence** at _University of Cambridge_ and affiliated with _Wolfson College_, 
+        * [June 2023] 🎓 I graduated from _HITsz_ with **Bachelor of Engineering in Data Science**, with distinction.
+        * [April 2022] 🎉 I started a position as **Research Assistant** at the _Alan Turing Institute_, supervised by Prof. Gesine Reinert and working on GNNs.
+        * [January 2022] 📖 I started visiting the _University of Oxford_, studying **Mathematics and Statistics** and affiliated with _St.Peter's College_.
 
 # design:
     #   columns: '2'
@@ -146,7 +147,6 @@ sections:
   #       street: 'Department of Engineering, Trumpington Street'
   #       city: Cambridge
   #       # region: 
-  
   #       postcode: CB2 1PZ
   #       country: United Kingdom
   #       country_code: UK
