@@ -19,7 +19,7 @@ sections:
         text: Download CV
         url: uploads/Tony_CV.pdf
     design:
-      css_class: dark
+      css_class: bright
       background:
         color: black
         image:
