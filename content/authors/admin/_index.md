@@ -155,13 +155,13 @@ skills:
         percent: 50
 
 languages:
-  - name: English🇬🇧
+  - name: English
     percent: 90
-  - name: Cantonese🇭🇰
+  - name: Cantonese
     percent: 100
-  - name: Chinese🇨🇳
+  - name: Chinese
     percent: 100
-  - name: French🇫🇷
+  - name: French
     percent: 10
 
 # Awards.
