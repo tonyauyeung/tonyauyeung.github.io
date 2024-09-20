@@ -150,18 +150,18 @@ skills:
         description: ''
         percent: 70
         # icon: cat
-      - name: always exploring
+      - name: always exploring...
         description: ''
         percent: 50
 
 languages:
-  - name: English
+  - name: English🇬🇧
     percent: 90
-  - name: Cantonese
-    percent: 1000
-  - name: Chinese
+  - name: Cantonese🇭🇰
     percent: 100
-  - name: French
+  - name: Chinese🇨🇳
+    percent: 100
+  - name: French🇫🇷
     percent: 10
 
 # Awards.
