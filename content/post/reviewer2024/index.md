@@ -8,4 +8,4 @@ tags:
 # summary: I received a Bachelor of Engineering with distinction.
 ---
 
-I'm happy to share that I am invited to be a reviewer in [ICLR 2025](https://iclr.cc/) and [NeurIPS 2024 Workshop: Foundation Models for Science](https://fm-science.github.io/). It's exiting as my first to be a reviewer.
+I'm happy to share that I am invited to be a reviewer in [ICLR 2025](https://iclr.cc/) and [NeurIPS 2024 Workshop: Foundation Models for Science](https://fm-science.github.io/). It's exiting be a reviewer for the first time.
