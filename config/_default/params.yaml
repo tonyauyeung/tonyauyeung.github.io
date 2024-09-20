@@ -16,7 +16,7 @@ marketing:
     # org_name: Ruikang OuYang
     # description: 'Tony Ruikang OuYang's homepage.'
     # twitter: 'tonyauyeung'
-    org_name: ''
+    org_name: 'Tony Ruikang OuYang's homepage.'
     description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
     twitter: 'GetResearchDev'
   analytics:
@@ -45,7 +45,7 @@ footer:
   copyright:
     notice: '© {year} Me. This work is licensed under {license}'
     license:
-      enable: false
+      enable: true
       allow_derivatives: false
       share_alike: false
       allow_commercial: false
