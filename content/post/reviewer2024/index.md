@@ -1,6 +1,6 @@
 ---
 title: I'm invited as a reviwer for ICLR 2025 and NeurIPS 2024 FM4Science Workshop.
-date: 2024-09
+date: 2024-09-16
 authors:
   - admin
 tags:
