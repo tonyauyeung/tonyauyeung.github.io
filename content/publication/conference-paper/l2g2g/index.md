@@ -76,7 +76,6 @@ image:
 #   Otherwise, set `slides: ""`.
 # slides: example
 ---
-
 <!-- {{% callout note %}}
 Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
 {{% /callout %}}
@@ -86,17 +85,15 @@ Create your slides in Markdown - click the _Slides_ button to check out the exam
 {{% /callout %}}
 
 Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->
-### Introduction
-
-- Representation learning is a foundamental problem in machine learning. 
+- Scalable, stable and efficient unsupervised pretraining is a foundamental problem in machine learning. 
 - Graph-structured data is prevalent today in various domains, such as social networks, web graphs, and protein-protein interaction networks, often scaling to millions of nodes and edges.
-- Learning representations for large scale graphs can be inefficient and unstable. 
+- Unsupervised pretraining for large scale graphs can be inefficient and unstable.
 
 In this work, we propose __Local2GAE2Global__, a _parallelable_ and _distributable_ framework relies on dynamical latent synchronization:
 
 1. A large-scale graph is first divided into patches; 
-2. encoding machine, _e.g._ Graph Autoencoder (shared weight), then computes the local embedding for each node in each patch parellely;
+2. encoding machine, _e.g._ [Graph Autoencoder](https://arxiv.org/abs/1611.07308) (shared weight), then computes the local embedding for each node in each patch parellely;
 3. The [local2global](https://arxiv.org/pdf/2201.04729) algorithm is applied to synchronize those local embeddings to global ones; 
 4. Finally, a non-learnable decoder, _i.e._ inner product, decodes the global embeddings which are used to compute a reconstruction loss as usual for neural net optimization.
 
-Additionaly, the nature of patch training enables its direct application to Federated Learning, which is an open direction in the future.
+Additionaly, the nature of patch training enables its direct application to Federated Learning, _e.g._ health networks and financial transection networks, which is an open direction in the future.
