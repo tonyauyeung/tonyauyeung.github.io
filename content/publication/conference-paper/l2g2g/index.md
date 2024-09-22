@@ -77,7 +77,7 @@ image:
 # slides: example
 ---
 
-{{% callout note %}}
+<!-- {{% callout note %}}
 Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
 {{% /callout %}}
 
@@ -85,4 +85,6 @@ Click the _Cite_ button above to demo the feature to enable visitors to import p
 Create your slides in Markdown - click the _Slides_ button to check out the example.
 {{% /callout %}}
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->
+# TL;DR
+Representation learning is a foundamental problem in machine learning. Graphical structure data is everywhere nowadays, like social networks, web graphs and protein-protein interaction networks etc, which can scale up to million of nodes and edges. Learning representations for large scale graphs can be inefficient and unstable. In this work, we propose Local2GAE2Global, a parallelable and distributable framework relies on dynamical latent synchronization. A large-scale graph is first divided into patches; encoding machine, _e.g._ Graph Autoencoder (shared weight), then computes the local embedding for each node in each patch parellely; the [local2global](https://arxiv.org/pdf/2201.04729) algorithm is applied to synchronize those local embeddings to global ones; finally, a non-learnable decoder, _i.e._ inner product, decodes the global embeddings which are used to compute a reconstruction loss as usual for neural net optimization.
