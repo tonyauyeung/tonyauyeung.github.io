@@ -23,13 +23,13 @@ publishDate: '2023-11-28'
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ['conference paper']
+# publication_types: ['conference paper']
 
 # Publication name and optional abbreviated publication name.
 publication: In *International Conference on Complex Networks and Their Applications*
 publication_short: In *CNA*
 
-abstract: For analysing real-world networks, graph representation learning is a popular tool. These methods, such as a graph autoencoder (GAE), typically rely on low-dimensional representations, also called embeddings, which are obtained through minimising a loss function; these embeddings are used with a decoder for downstream tasks such as node classification and edge prediction. While GAEs tend to be fairly accurate, they suffer from scalability issues. For improved speed, a Local2Global approach, which combines graph patch embeddings based on eigenvector synchronisation, was shown to be fast and achieve good accuracy. Here we propose L2G2G, a Local2Global method which improves GAE accuracy without sacrificing scalability. This improvement is achieved by dynamically synchronising the latent node representations, while training the GAEs. It also benefits from the decoder computing an only local patch loss. Hence, aligning the local embeddings in each epoch utilises more information from the graph than a single post-training alignment does, while maintaining scalability. We illustrate on synthetic benchmarks, as well as real-world examples, that L2G2G achieves higher accuracy than the standard Local2Global approach and scales efficiently on the larger data sets. We find that for large and dense networks, it even outperforms the slow, but assumed more accurate, GAEs.
+# abstract: For analysing real-world networks, graph representation learning is a popular tool. These methods, such as a graph autoencoder (GAE), typically rely on low-dimensional representations, also called embeddings, which are obtained through minimising a loss function; these embeddings are used with a decoder for downstream tasks such as node classification and edge prediction. While GAEs tend to be fairly accurate, they suffer from scalability issues. For improved speed, a Local2Global approach, which combines graph patch embeddings based on eigenvector synchronisation, was shown to be fast and achieve good accuracy. Here we propose L2G2G, a Local2Global method which improves GAE accuracy without sacrificing scalability. This improvement is achieved by dynamically synchronising the latent node representations, while training the GAEs. It also benefits from the decoder computing an only local patch loss. Hence, aligning the local embeddings in each epoch utilises more information from the graph than a single post-training alignment does, while maintaining scalability. We illustrate on synthetic benchmarks, as well as real-world examples, that L2G2G achieves higher accuracy than the standard Local2Global approach and scales efficiently on the larger data sets. We find that for large and dense networks, it even outperforms the slow, but assumed more accurate, GAEs.
 
 # Summary. An optional shortened abstract.
 summary: L2G2G, a scalable and distributable graph autoencoder for large graph representation learning.
@@ -86,16 +86,17 @@ Create your slides in Markdown - click the _Slides_ button to check out the exam
 {{% /callout %}}
 
 Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->
-# TL;DR
+### Introduction
 
 - Representation learning is a foundamental problem in machine learning. 
 - Graph-structured data is prevalent today in various domains, such as social networks, web graphs, and protein-protein interaction networks, often scaling to millions of nodes and edges.
 - Learning representations for large scale graphs can be inefficient and unstable. 
 
-In this work, we propose Local2GAE2Global, a parallelable and distributable framework relies on dynamical latent synchronization: 
+In this work, we propose __Local2GAE2Global__, a _parallelable_ and _distributable_ framework relies on dynamical latent synchronization:
 
-1. A large-scale graph is first divided into patches; encoding machine, _e.g._ Graph Autoencoder (shared weight), then computes the local embedding for each node in each patch parellely;
-2. The [local2global](https://arxiv.org/pdf/2201.04729) algorithm is applied to synchronize those local embeddings to global ones; 
-3. Finally, a non-learnable decoder, _i.e._ inner product, decodes the global embeddings which are used to compute a reconstruction loss as usual for neural net optimization.
+1. A large-scale graph is first divided into patches; 
+2. encoding machine, _e.g._ Graph Autoencoder (shared weight), then computes the local embedding for each node in each patch parellely;
+3. The [local2global](https://arxiv.org/pdf/2201.04729) algorithm is applied to synchronize those local embeddings to global ones; 
+4. Finally, a non-learnable decoder, _i.e._ inner product, decodes the global embeddings which are used to compute a reconstruction loss as usual for neural net optimization.
 
 Additionaly, the nature of patch training enables its direct application to Federated Learning, which is an open direction in the future.
