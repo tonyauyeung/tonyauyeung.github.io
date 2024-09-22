@@ -101,16 +101,6 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
-  # - block: markdown
-  #   id: news
-  #   content:
-  #     title: "News"
-  #     subtitle: ""
-  #     text: |-
-  #       * [October 2023] I started **MPhil in Machine Learning and Machine Intelligence** at _University of Cambridge_ and affiliated with _Wolfson College_.
-  #       * [June 2023] I graduated from _HITsz_ with **Bachelor of Engineering in Data Science**, with distinction.
-  #       * [April 2022] I started a position as **Research Assistant** at the _Alan Turing Institute_, supervised by __Prof. Gesine Reinert__ and working on GNNs.
-  #       * [January 2022] I started visiting the _University of Oxford_, studying **Mathematics and Statistics** and affiliated with _St.Peter's College_.
 
 # design:
     #   columns: '2'
