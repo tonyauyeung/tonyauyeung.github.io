@@ -22,7 +22,7 @@ main:
   # - name: Contact
   #   url: /#contact
   #   weight: 20
-  - name: Blogs
+  - name: Projects
     url: projects/
     weight: 14
   # - name: Teaching
