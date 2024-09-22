@@ -2,6 +2,8 @@
 title: Probabilistic Machine Learning Basics
 date: 2024-09-23
 external_link: ''
+authors:
+  - admin
 tags:
   - Machine Learning
   - Blog
