@@ -25,4 +25,4 @@ This note is outlined as follows:
 
 The full note is provided in 
 
-<iframe src="/content/blog/ml_notes/ml_notes.pdf" width="100%" height="600px"></iframe>
+<!-- <iframe src="/content/blog/ml_notes/ml_notes.pdf" width="100%" height="600px"></iframe> -->
