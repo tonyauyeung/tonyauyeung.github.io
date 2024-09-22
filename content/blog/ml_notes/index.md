@@ -24,5 +24,3 @@ This note is outlined as follows:
 - Expectation-Maximization: a review in both the approximate inference perspective and the KL-divergence one
 
 The full note is provided in 
-
-<!-- <iframe src="/content/blog/ml_notes/ml_notes.pdf" width="100%" height="600px"></iframe> -->
