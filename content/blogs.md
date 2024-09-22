@@ -11,13 +11,13 @@ design:
 sections:
   - block: collection
     content:
-      title: Blogs
+      title: Selected Blogs
       text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
       filters:
         folders:
           - blog
-    design:
-      view: article-grid
-      fill_image: false
-      columns: 1
+    # design:
+    #   view: article-grid
+    #   fill_image: false
+    #   columns: 1
 ---
