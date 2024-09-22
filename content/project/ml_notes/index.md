@@ -1,9 +1,7 @@
 ---
 title: Probabilistic Machine Learning Basics
 date: 2024-09-23
-external_link: ''
-authors:
-  - admin
+external_link: 'https://github.com/tonyauyeung/tonyauyeung.github.io'
 tags:
   - Machine Learning
   - Blog
