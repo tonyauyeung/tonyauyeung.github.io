@@ -11,8 +11,8 @@ design:
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: Blogs
+      text: Here are my blogs, including notes for a wide range of machine learning topics and selected toys, etc.
       filters:
         folders:
           - project
