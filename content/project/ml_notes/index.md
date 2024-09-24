@@ -4,6 +4,7 @@ date: 2024-09-23
 external_link: 'https://loud-ounce-132.notion.site/Probabilistic-Machine-Learning-Basics-3d8e8f31f1f9465598b043bf8d7c135b?pvs=4'
 tags:
   - Machine Learning
+  - Notes
   - Blog
 ---
 

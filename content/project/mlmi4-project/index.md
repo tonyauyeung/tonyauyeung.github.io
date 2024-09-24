@@ -4,6 +4,7 @@ date: 2024-09-23
 external_link: 'https://github.com/tonyauyeung/The-Family-of-DDPMs?tab=readme-ov-file'
 tags:
   - Machine Learning
+  - Generative Models
   - Project
 ---
 
