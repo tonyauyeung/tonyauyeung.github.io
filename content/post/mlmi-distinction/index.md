@@ -1,6 +1,6 @@
 ---
 title: 🎉 I've successfully completed my MPhil in Machine Learning and Machine Intelligence with Distinction!
-date: 2023-10-01
+date: 2024-10-02
 authors:
   - admin
 tags:
