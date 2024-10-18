@@ -1,12 +1,12 @@
 ---
 # Display name
-title: Ruikang OuYang
+title: RuiKang OuYang
 
 # Name pronunciation (optional)
 name_pronunciation: # Chien Shiung Wu
 
 # Full name (for SEO)
-first_name: Ruikang
+first_name: RuiKang
 last_name: OuYang
 
 # Status emoji
@@ -200,4 +200,4 @@ languages:
 
 Hi there 👋. I'm _Tony Ruikang OuYang_ (_歐陽瑞康_ in Chinese; _Seoihong AuYeung_ pronounced in Cantonese). Recently, I completed my **MPhil in Machine Learning and Machine Intelligence** from the University of Cambridge 🎉. My MPhil thesis focus on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org).
 
-My current research interests span <u>generative models</u>, <u>neural samplers</u>, and their applications to <u>molecular generation</u> 🧬. Generally, I'm interested in <u>probabilistic machine learning</u> and <u>AI4S</u>, espesially developping powerful, efficient and scalable methods that can applied to physics ⚛️ and biochemistry 🧪.
+My current research interests span <u>generative models</u>, <u>neural samplers</u>, and their applications to <u>molecular generation</u> 🧬. Generally, I'm interested in <u>probabilistic machine learning</u> and <u>AI4S</u>, especially developing powerful, efficient and scalable methods that can applied to physics ⚛️ and biochemistry 🧪.

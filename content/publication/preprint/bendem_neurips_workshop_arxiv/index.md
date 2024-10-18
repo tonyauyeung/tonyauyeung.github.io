@@ -1,5 +1,5 @@
 ---
-title: 'BEnDEM: A Boltzmann Sampler Based on Bootstrapped Denoising Energy Matching'
+title: 'BNEM: A Boltzmann Sampler Based on Bootstrapped Noised Energy Matching'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -27,9 +27,9 @@ publication_types: ['preprint']
 
 # Publication name and optional abbreviated publication name.
 # publication: In *Hugo Blox Builder Conference*
-publication_short: In *arxiv*
+publication_short: In *arxiv*; accepted by NeurIPS ML4Phy workshop
 
-abstract: Developing an efficient sampler capable of generating independent and identically distributed (IID) samples from a Boltzmann distribution is a crucial challenge in scientific research, e.g. molecular dynamics. In this work, we intend to learn neural samplers given energy functions instead of data sampled from the Boltzmann distribution. By learning the energies of the noised data, we propose a diffusion-based sampler, ENERGY-BASED DENOISING ENERGY MATCHING, which theoretically has lower variance and more complexity compared to related works. Furthermore, a novel bootstrapping technique is applied to EnDEM to balance between bias and variance. We evaluate EnDEM and BEnDEM on a 2-dimensional 40 Gaussian Mixture Model (GMM) and a 4-particle double-welling potential (DW-4). The experimental results demonstrate that BEnDEM can achieve state-of-the-art performance while being more robust.
+abstract: Developing an efficient sampler capable of generating independent and identically distributed (IID) samples from a Boltzmann distribution is a crucial challenge in scientific research, e.g. molecular dynamics. In this work, we intend to learn neural samplers given energy functions instead of data sampled from the Boltzmann distribution. By learning the energies of the noised data, we propose a diffusion-based sampler, NOISED ENERGY MATCHING, which theoretically has lower variance and more complexity compared to related works. Furthermore, a novel bootstrapping technique is applied to NEM to balance between bias and variance. We evaluate NEM and BNEM on a 2-dimensional 40 Gaussian Mixture Model (GMM) and a 4-particle double-welling potential (DW-4). The experimental results demonstrate that BNEM can achieve state-of-the-art performance while being more robust.
 
 # Summary. An optional shortened abstract.
 summary: A neural sampler for Boltzmann distribution, leveraging energy-based diffusion, denoising energy matching and bootstrap energy estimation.
