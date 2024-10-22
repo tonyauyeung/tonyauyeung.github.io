@@ -5,7 +5,7 @@ title: 'Energy-Based Diffusion Neural Sampler for Boltzmann Densities'
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
-  - admim
+  - admin
 
 author_notes:
   - 'University of Cambridge'
@@ -43,7 +43,7 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
+url_pdf: 'MPhil_Thesis.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
