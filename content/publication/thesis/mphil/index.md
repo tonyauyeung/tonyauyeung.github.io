@@ -43,7 +43,7 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: 'content/publication/thesis/mphil/MPhil_Thesis.pdf'
+url_pdf: mphil_thesis/MPhil_Thesis.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
