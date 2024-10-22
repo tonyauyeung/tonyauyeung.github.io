@@ -63,7 +63,7 @@ education:
       Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by Prof. José Miguel Hernández-Lobato.
     button:
       text: 'Read Thesis'
-      url: mphil_thesis/MPhil_Thesis.pdf
+      url: uploads/resume.pdf
 
   - area: Visiting student in Mathematics and Statistics
     institution: University of Oxford
