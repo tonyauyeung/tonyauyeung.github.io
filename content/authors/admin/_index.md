@@ -58,12 +58,12 @@ education:
   - area: MPhil in Machine Learning and Machine Intelligence
     institution: University of Cambridge
     date_start: 2023-10-01
-    date_end: ''
+    date_end: 2024-08-31
     summary: |
       Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by Prof. José Miguel Hernández-Lobato.
     button:
       text: 'Read Thesis'
-      url: uploads/resume.pdf
+      url: static/mphil_thesis/MPhil_Thesis.pdf
 
   - area: Visiting student in Mathematics and Statistics
     institution: University of Oxford
@@ -80,6 +80,15 @@ education:
       GPA: 90/100
 
 work:
+  - position: Research Assistant in Machine Learning
+    company_name: Machine Learning Group, University of Cambridge
+    company_url: 'https://mlg.eng.cam.ac.uk/about.html'
+    company_logo: 
+    date_start: 2024-11-01
+    date_end: 2025-10-31
+    summary: |
+      Research about machine learning for sampling, supervised by Prof. José Miguel Hernández-Lobato.
+
   - position: Research Assistant
     company_name: The Alan Turing Institute
     company_url: 'https://www.turing.ac.uk/'
