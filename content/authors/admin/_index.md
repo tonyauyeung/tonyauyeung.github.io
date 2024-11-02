@@ -60,7 +60,7 @@ education:
     date_start: 2023-10-01
     date_end: 2024-08-31
     summary: |
-      Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by Prof. José Miguel Hernández-Lobato.
+      Graduated with Distinction (top 10%). Thesis on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by Prof. José Miguel Hernández-Lobato.
     button:
       text: 'Read Thesis'
       url: static/mphil_thesis/MPhil_Thesis.pdf
@@ -70,14 +70,14 @@ education:
     date_start: 2022-01-12
     date_end: 2022-07-31
     summary: |
-      I was affiliated with St.Peter's College and Department of Statistics. I acknowledge the full-funding provided by HITsz.
+      Graded as A+. I was affiliated with St.Peter's College and Department of Statistics. I acknowledge the full-funding provided by HITsz.
 
   - area: BEng in Data Science
     institution: Harbin Institute of Technology, shenzhen
     date_start: 2019-09-01
     date_end: 2023-06-30
     summary: |
-      GPA: 90/100
+      Graduated with Distinction (top 10%), graded as 90/100.
 
 work:
   - position: Research Assistant in Machine Learning
