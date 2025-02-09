@@ -13,7 +13,7 @@
   contents:
     - title: MPhil in Machine Learning and Machine Intelligence
       institution: University of Cambridge, Cambridge, United Kingdom
-      year: 2023.10-2024.9
+      year: 2024
       description:
         - Graduate with Distinction
         - Description 2.
@@ -23,12 +23,12 @@
             - Sub-description 2.
     - title: Visiting student in Mathematics and Statistics
       institution: University of Oxford, Oxford, United Kingdom
-      year: 2022.1-2022.7
+      year: 2022
       description:
         - Fully-funded by HITsz
     - title: BEng in Data Science
       institution: Harbin Institute of Technology (Shenzhen), Shenzhen, China
-      year: 2019.9-2023.6
+      year: 2023
       description:
         - Graduate with Distinction
 
@@ -37,13 +37,13 @@
   contents:
     - title: Research Assistant in Machine Learning
       institution: Machine Learning Group, Department of Engineering, University of Cambridge
-      year: 2024 - 2025
+      year: 2025
       description:
         - Research about probabilistic machine learning, generative models, and applications on molecular generation
     
     - title: Research Assistant
       institution: The Alan Turing Institute
-      year: 2022.4 - 2022.7
+      year: 2022
       description:
         - Research about scalable graph neural networks
 

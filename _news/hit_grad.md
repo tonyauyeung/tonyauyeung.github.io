@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I graduated from *BEng in Data Science* in HITsz with **Distinction** 🎓.
+I graduated from *BEng in Data Science* @ HITsz 🎓.

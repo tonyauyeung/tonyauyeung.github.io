@@ -6,7 +6,7 @@ inline: true
 related_posts: false
 ---
 
-I graduated from *MPhil in Machine Learning and Machine Intelligence* in Cambridge with **Distinction** 🎓.
+I graduated from *MPhil in Machine Learning and Machine Intelligence* @ Cambridge 🎓.
 
 <!-- ---
 
