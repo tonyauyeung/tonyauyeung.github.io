@@ -431,16 +431,14 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+    },{id: "news-i-graduated-from-beng-in-data-science-in-hitsz-with-distinction",
+          title: 'I graduated from BEng in Data Science in HITsz with Distinction 🎓.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-i-graduated-from-mphil-in-machine-learning-and-machine-intelligence-in-cambridge-with-distinction",
+          title: 'I graduated from MPhil in Machine Learning and Machine Intelligence in Cambridge with...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-i-started-a-new-position-as-research-assistant-in-machine-learning-at-the-machine-learning-group-university-of-cambridge",
+          title: 'I started a new position as Research Assistant in Machine Learning at the...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
