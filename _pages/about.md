@@ -20,10 +20,10 @@ announcements:
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+# latest_posts:
+#   enabled: true
+#   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+#   limit: 3 # leave blank to include all the blog posts
 ---
 Hi there 👋. I'm _Tony Ruikang OuYang_ (_歐陽瑞康_ in Chinese; _Seoihong AuYeung_ pronounced in Cantonese). I'm now a research assistant in Machine Learning 🤖 at the [Machine Learning Group](https://mlg.eng.cam.ac.uk/about.html), the University of Cambridge, supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org). Recently, I completed my **MPhil in Machine Learning and Machine Intelligence** from the University of Cambridge 🎉. My MPhil thesis focus on energy-based models and neural sampler for sampling from Boltzmann distribution and supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org).
 
