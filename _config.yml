@@ -265,7 +265,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [OuYang, Ouyang]
+  last_name: [OuYang, Ouyang, OuYang*, Ouyang*]
   first_name: [RuiKang, R., Ruikang]
 
   style: apa
