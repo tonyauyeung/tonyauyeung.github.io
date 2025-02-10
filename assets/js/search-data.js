@@ -48,15 +48,15 @@ ninja.data = [{
           window.location.href = "/blog/2024/pml-notes/";
         
       },
-    },{id: "post-a-post-with-formatting-and-links",
+    },{id: "post-the-family-of-denoising-diffusion-probabilistic-models",
       
-        title: "a post with formatting and links",
+        title: "The-Family of Denoising Diffusion Probabilistic Models",
       
-      description: "march &amp; april, looking forward to summer",
+      description: "An introduction to DDPM and its variants (i.e. DDIM and IDDPM), with toy implementations on CIFAR-10.",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2015/formatting-and-links/";
+          window.location.href = "/blog/2024/family-of-ddpm/";
         
       },
     },{id: "news-i-completed-beng-in-data-science-hitsz",
