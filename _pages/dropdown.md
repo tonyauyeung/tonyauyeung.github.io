@@ -5,7 +5,7 @@ nav: true
 nav_order: 3
 dropdown: true
 children:
-  - title: blog
+  - title: blogs
     permalink: /blog/
   - title: divider
   # - title: projects
