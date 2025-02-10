@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 16th October 2000
     - name: Languages
-      value: English, Chinese Mandarin, Cantonese
+      value: English, Chinese, Cantonese
 
 - title: Education
   type: time_table
@@ -16,16 +16,13 @@
       year: 2023-2024
       description:
         - Graduate with Distinction
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - Affiliated with Wolfson College
     - title: Visiting student in Mathematics and Statistics
       institution: University of Oxford, Oxford, United Kingdom
       year: 2022.1-2022.7
       description:
         - Fully-funded by HITsz
+        - Affiliated with St Peter's College
     - title: BEng in Data Science
       institution: Harbin Institute of Technology (Shenzhen), Shenzhen, China
       year: 2019-2023
