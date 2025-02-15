@@ -37,7 +37,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "post-probabilistic-machine-learning-basics",
+            },{id: "post-introduction-to-variational-inference",
+      
+        title: "Introduction to Variational Inference",
+      
+      description: "Notes for bounds in Variational Inference",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2024/intro-2-vi/";
+        
+      },
+    },{id: "post-probabilistic-machine-learning-basics",
       
         title: "Probabilistic Machine Learning Basics",
       
