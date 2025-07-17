@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: RA in <a href='https://cbl.eng.cam.ac.uk/people/'>MLG@Cambridge</a>
+subtitle: Incoming PhD in <a href='https://cbl.eng.cam.ac.uk/people/'>MLG@Cambridge</a>
 
 profile:
   align: left
@@ -24,7 +24,7 @@ announcements:
 #   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
 #   limit: 3 # leave blank to include all the blog posts
 ---
-Hi there 👋. I'm _Tony RuiKang OuYang_ (_歐陽瑞康_ in Chinese; _SeoiHong AuYeung_ pronounced in Cantonese). I'm now a research assistant in Machine Learning 🤖 at the [Machine Learning Group](https://mlg.eng.cam.ac.uk/about.html), University of Cambridge, supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org). 
+Hi there 👋. I'm _Tony RuiKang OuYang_ (_歐陽瑞康_ in Chinese; _SeoiHong AuYeung_ pronounced in Cantonese). I'm an incoming PhD in Machine Learning 🤖 at the [Machine Learning Group](https://mlg.eng.cam.ac.uk/about.html), University of Cambridge, supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org) and fully funded by the _EPSRA DLA_ scholarship.
 
 Recently, I completed my **MPhil in Machine Learning and Machine Intelligence** from the University of Cambridge 🎉. My MPhil thesis focus on energy-based neural sampler for sampling from Boltzmann distribution, which is supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org). Prior to that, I finished my **BEng in Data Science** in Harbin Institute of Technology, Shenzhen (HITsz) and spent a wonderful year visiting in the University of Oxford studying Mathematics and Statistics (fully-funded by HITsz).
 
