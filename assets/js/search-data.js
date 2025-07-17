@@ -144,7 +144,7 @@ ninja.data = [{
         title: 'X',
         section: 'Socials',
         handler: () => {
-          window.open("https://twitter.com/tonyauyeung", "_blank");
+          window.open("https://twitter.com/TonyRKOuYang", "_blank");
         },
       },{
         id: 'social-custom_social',
