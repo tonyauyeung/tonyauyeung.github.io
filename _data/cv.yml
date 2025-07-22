@@ -11,6 +11,11 @@
 - title: Education
   type: time_table
   contents:
+    - title: PhD in Advanced Machine Learning
+      institution: University of Cambridge, Cambridge, United Kingdom
+      year: 2025-2028
+      description:
+        - Affiliated with Jesus College
     - title: MPhil in Machine Learning and Machine Intelligence
       institution: University of Cambridge, Cambridge, United Kingdom
       year: 2023-2024
