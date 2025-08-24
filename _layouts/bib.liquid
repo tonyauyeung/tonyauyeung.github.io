@@ -190,8 +190,9 @@
         </a>
       {% endif %}
       {% if entry.star %}
-        <span class="badge">*</span>
-        <span class="badge">{{ entry.star }}</span>
+        <a class="star btn btn-sm z-depth-0" role="button">
+          * {{ entry.star }}
+        </a>
       {% endif %}
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
