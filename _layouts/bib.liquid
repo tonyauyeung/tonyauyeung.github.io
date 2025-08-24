@@ -48,10 +48,10 @@
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
+
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
-
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
@@ -99,7 +99,6 @@
         {%- endif -%}
       {% endfor %}
       {%- assign more_authors = author_array_size | minus: author_array_limit -%}
-
       {%- assign more_authors_hide = more_authors | append: ' more author' -%}
       {% if more_authors > 0 %}
         {%- if more_authors > 1 -%}
@@ -190,7 +189,7 @@
         </a>
       {% endif %}
 
-      {% assign star_text = entry['star'] | to_s | strip %}
+      {%- assign star_text = entry['star'] | to_s | strip -%}
       {% if star_text != '' %}
         <a class="star btn btn-sm z-depth-0" role="button">*</a>
       {% endif %}
@@ -298,3 +297,16 @@
     {% endif %}
   </div>
 </div>
+
+<!-- Minimal inline handler to toggle .star like .award -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.links a.star').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const row = btn.closest('.row') || btn.closest('.teaser') || btn.parentElement;
+      const panel = row && row.querySelector('div.star');
+      if (panel) panel.classList.toggle('hidden');
+    });
+  });
+});
+</script>
