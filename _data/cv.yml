@@ -15,6 +15,7 @@
       institution: University of Cambridge, Cambridge, United Kingdom
       year: 2025-2028
       description:
+        - Fully-funded by EPSRA DLA scholarship 
         - Affiliated with Jesus College
     - title: MPhil in Machine Learning and Machine Intelligence
       institution: University of Cambridge, Cambridge, United Kingdom
@@ -73,18 +74,22 @@
   contents:
     - title: Generative models
       items:
-        - Diffusion models; Flow Matching; Variational methods; etc.
-    - title: Neural Sampler
+        - Diffusion models; Stochastic Interpolants; Normalizing Flows; Consistency Models; etc.
+        - Generative models on non-Euclidean spaces, e.g. discrete spaces and manifolds
+    - title: Energy-based Models
       items:
-        - sampling from Boltzmann densities; Boltzmann Generator; Implicit Sampler; etc.
-    - title: Sampling Methods
+        - EBMs meet Diffusions/Stochastic-Interpolants/Flow-Matchings
+        - EBMs meet free energy difference estimation
+    - title: Sampling methods and neural samplers
       items:
-        - Parallel Tempering; Diffusion/gradient-informed methods; etc.
-    - title: Applications for Science
+        - Replica Exchange (a.k.a. Parallel Tempering); Sequential Monte Carlo; etc.
+        - Boltzmann Generator; Boltzmann Emulator; etc.
+        - Diffusion inspired neural samplers
+    - title: AI for Science
       items:
-        - Molecular Generation
+        - Molecular/material Generation
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> ⚽️.
+    - <u>Hobbies:</u> ⚽️ & 🧗 & 🏋️ & ✈️
