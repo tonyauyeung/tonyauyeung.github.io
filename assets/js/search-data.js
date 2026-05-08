@@ -23,21 +23,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "dropdown-blogs",
-              title: "blogs",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "dropdown-repositories",
-              title: "repositories",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "post-introduction-to-variational-inference",
+        },{id: "post-introduction-to-variational-inference",
       
         title: "Introduction to Variational Inference",
       
@@ -70,25 +56,7 @@ ninja.data = [{
           window.location.href = "/blog/2024/family-of-ddpm/";
         
       },
-    },{id: "news-i-completed-beng-in-data-science-hitsz",
-          title: 'I completed BEng in Data Science @ HITsz 🎓.',
-          description: "",
-          section: "News",},{id: "news-i-completed-mphil-in-machine-learning-and-machine-intelligence-cambridge",
-          title: 'I completed MPhil in Machine Learning and Machine Intelligence @ Cambridge 🎓.',
-          description: "",
-          section: "News",},{id: "news-i-started-a-new-position-as-research-assistant-in-machine-learning-cambridge",
-          title: 'I started a new position as Research Assistant in Machine Learning @ Cambridge....',
-          description: "",
-          section: "News",},{id: "news-i-gave-an-oral-presentation-for-bnem-in-workshop-on-ml4molecules-ellis-2024",
-          title: 'I gave an oral presentation for BNEM in Workshop on ML4Molecules @ ELLIS...',
-          description: "",
-          section: "News",},{id: "news-one-paper-is-accepted-by-icml-2025",
-          title: 'One paper is accepted by ICML 2025 🎉',
-          description: "",
-          section: "News",},{id: "news-i-start-my-phd-in-the-machine-learning-group-cambridge-fully-funded-by-the-dla-scholarship",
-          title: 'I start my PhD in the Machine Learning Group @ Cambridge, fully funded...',
-          description: "",
-          section: "News",},{id: "projects-project-2",
+    },{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
           section: "Projects",handler: () => {
