@@ -729,6 +729,20 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
+      .publication-card {
+        border: 1px solid var(--global-divider-color);
+        border-radius: 0.5rem;
+        padding: 0.9rem 0.75rem;
+        margin: 0;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .publication-card:hover {
+        transform: translateY(-2px) scale(1.01);
+        border-color: var(--global-divider-color);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+      }
+
       .preview {
       }
 
@@ -772,6 +786,7 @@ footer.sticky-bottom {
         > em {
           border-bottom: 1px solid;
           font-style: normal;
+          font-weight: 700;
         }
 
         > span.more-authors {

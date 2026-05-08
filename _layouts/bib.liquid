@@ -1,6 +1,6 @@
 ---
 ---
-<div class="row">
+<div class="row publication-card">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
@@ -25,22 +25,7 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=true
-            alt=entry.preview
-          %}
-        {% endif %}
-      {% endif %}
+      {% comment %} Preview image/icon intentionally disabled; keep only venue badge. {% endcomment %}
     </div>
   {% endif %}
 

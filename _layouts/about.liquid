@@ -40,6 +40,7 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    {% comment %}
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
@@ -47,6 +48,7 @@ layout: default
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
+    {% endcomment %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
