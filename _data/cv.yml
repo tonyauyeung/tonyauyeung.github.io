@@ -50,46 +50,27 @@
       description:
         - Research about scalable graph neural networks
 
-
-# - title: Open Source Projects
-#   type: time_table
+# - title: Academic Interests
+#   type: nested_list
 #   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 1921
+#     - title: Generative models
 #       items:
-#         - Nobel Prize in Physics
-#         - Matteucci Medal
-#     - year: 2029
+#         - Diffusion models; Stochastic Interpolants; Normalizing Flows; Consistency Models; etc.
+#         - Generative models on non-Euclidean spaces, e.g. discrete spaces and manifolds
+#     - title: Energy-based Models
 #       items:
-#         - Max Planck Medal
+#         - EBMs meet Diffusions/Stochastic-Interpolants/Flow-Matchings
+#         - EBMs meet free energy difference estimation
+#     - title: Sampling methods and neural samplers
+#       items:
+#         - Replica Exchange (a.k.a. Parallel Tempering); Sequential Monte Carlo; etc.
+#         - Boltzmann Generator; Boltzmann Emulator; etc.
+#         - Diffusion inspired neural samplers
+#     - title: AI for Science
+#       items:
+#         - Molecular/material Generation
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Generative models
-      items:
-        - Diffusion models; Stochastic Interpolants; Normalizing Flows; Consistency Models; etc.
-        - Generative models on non-Euclidean spaces, e.g. discrete spaces and manifolds
-    - title: Energy-based Models
-      items:
-        - EBMs meet Diffusions/Stochastic-Interpolants/Flow-Matchings
-        - EBMs meet free energy difference estimation
-    - title: Sampling methods and neural samplers
-      items:
-        - Replica Exchange (a.k.a. Parallel Tempering); Sequential Monte Carlo; etc.
-        - Boltzmann Generator; Boltzmann Emulator; etc.
-        - Diffusion inspired neural samplers
-    - title: AI for Science
-      items:
-        - Molecular/material Generation
-
-- title: Other Interests
+- title: Interests
   type: list
   contents:
     - <u>Hobbies:</u> ⚽️ & 🧗 & 🏋️ & ✈️
