@@ -8,6 +8,11 @@ _site
 .tweet-cache
 Gemfile.lock
 assets/libs/
+# LaTeX intermediates from CV build (Tony_CV.pdf is kept)
+assets/pdf/resume.aux
+assets/pdf/resume.log
+assets/pdf/resume.out
+assets/resume/publications_generated.tex
 node_modules/
 vendor
 .idea

@@ -92,7 +92,8 @@ git checkout -b $DEPLOY_BRANCH
 # Export JEKYLL_ENV=production
 export JEKYLL_ENV=production
 
-# Build site
+# Build CV PDF and site
+"$(dirname "$0")/build-resume.sh"
 bundle exec jekyll build
 
 # Purge unused css

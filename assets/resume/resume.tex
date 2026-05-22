@@ -1,0 +1,552 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={TRKOY's CV},
+    pdfauthor={TRKOY},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small TRKOY - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+% \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{\textsc}[\vspace{1pt}\titlerule]
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{0.5pt}]
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+  \onecolentry
+  \def\secondColumn{#2}
+  \def\thirdColumn{#3}
+  % first column is \fill, next two are fixed widths
+  \setcolumnwidth{\fill,10cm,4.5cm}
+  \begin{paracol}{3}
+}{
+  % switch to column 2, then column 3
+  \switchcolumn        % to column 2
+    \raggedright\secondColumn
+  \switchcolumn        % to column 3
+    \raggedleft\thirdColumn
+  \end{paracol}
+  \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in \today}\hspace{\widthof{Last updated in \today}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+% \usepackage{mathpazo}
+\usepackage{lmodern}
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Tony RuiKang OuYang}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Cambridge, UK}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:ro352@cam.ac.uk}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}ro352@cam.ac.uk}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+44-07551887937}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+44-07551887937}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://tonyauyeung.github.io}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}\textcolor{teal}{Homepage}}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/seoihong-auyeung-225845235}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}LinkedIn}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/tonyauyeung}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}GitHub}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    % \section{{Current Position}}
+    %     \begin{twocolentry}{
+    %     \textit{Cambridge, UK}
+        
+    %     \textit{Oct 2024 – present}}
+    %         \textbf{\href{https://mlg.eng.cam.ac.uk/about.html}{Machine Learning Group} @ University of Cambridge}
+            
+    %         \text{Research Assistant in Probabilistic Machine Learning}
+
+    %         {Supervisor: \textcolor{teal}{\href{https://jmhl.org}{Prof. José Miguel Hernández-Lobato}}}
+    %     \end{twocolentry}
+
+    %     \vspace{0.10 cm}
+    %     \begin{onecolentry}
+    %         \begin{highlights}
+    %             \item Probabilistic Machine Learning, Generative Models, Sampling methods, and AI4Science
+    %         \end{highlights}
+    %     \end{onecolentry}
+    \section{Education}     
+        \begin{twocolentry}{
+        \textit{Cambridge, UK}
+        
+        \textit{Oct 2025 – June 2028}}
+            \textbf{University of Cambridge}
+
+            \textit{DPhil in Advanced Machine Learning}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Supervisor \href{https://jmhl.org}{Prof. José Miguel Hernández-Lobato}
+                \item \textbf{Fully-funded} by EPSRC DLA Studentship Award
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{
+        \textit{Cambridge, UK}
+        
+        \textit{Sep 2023 – Aug 2024}}
+            \textbf{University of Cambridge}
+
+            \textit{MPhil in Machine Learning and Machine Intelligence}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Graduate with \textbf{Distinction} (\textbf{Grade: 77\%, Top 20\%})
+                \item Course Advisor \& Thesis Supervisor: \href{https://jmhl.org}{Prof. José Miguel Hernández-Lobato}
+                \item Thesis: {\color{teal}Energy-based Neural Sampler for Boltzmann Distribution} (\textbf{Grade: 77.5\%})
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{
+        \textit{Oxford, UK}
+        
+        \textit{Jan 2022 – Jul 2022}}
+            \textbf{University of Oxford}
+
+            \textit{Visiting Student in Mathematics and Statistics}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Supervisor: \href{https://www.stats.ox.ac.uk/~reinert/}{Prof. Gesine Reinert} and \href{https://www.stats.ox.ac.uk/~nicholls/}{Prof. Geoff Nicholls}
+                \item Fully funded by Harbin Institute of Technology, Shenzhen
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{
+        \textit{Shenzhen, CN}
+        
+        \textit{Sep 2019 – Jun 2023}}
+            \textbf{Harbin Institute of Technology, shenzhen}
+
+            \textit{BEng in Data Science}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Graduate with \textbf{Distinction} (\textbf{Grade: 90\%, Top 10\%})
+                \item Thesis Supervisor: \href{https://scholar.google.com.au/citations?user=JMoMObMAAAAJ&hl=zh-CN}{Yi Zhao}
+                \item Thesis: {\color{teal} Implicit Local Node Embedding Synchronisation for Graph Autoencoders} (\textbf{Grade: 90\%})
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Experiences}
+        \begin{twocolentry}{
+        \textit{London, UK}    
+            
+        \textit{May. 2025 - present}}
+            \textbf{MolSS reading group}
+            
+            \textit{Lead Organiser}
+
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item {A \href{https://molss-reading-group.github.io/MolSS/}{community} for machine learning in molecular science}
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{
+        \textit{Cambridge, UK}
+        
+        \textit{Oct 2024 – Oct 2025}}
+            \textbf{MLG@Cambridge}
+            
+            \textit{Research Assistant in Probabilistic Machine Learning}
+
+            {Supervisor: \textcolor{teal}{\href{https://jmhl.org}{Prof. José Miguel Hernández-Lobato}}}
+        \end{twocolentry}
+        \begin{twocolentry}{
+        \textit{London, UK}    
+            
+        \textit{Apr. 2022 - Jul. 2022}}
+            \textbf{The Alan Turing Institute}
+            
+            \textit{Research Assistant}
+
+            Supervisor: \href{https://www.stats.ox.ac.uk/~reinert/}{Prof. Gesine Reinert}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item {Research about scalable Graph Neural Network and Federated Learning for data privacy}
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+    \section{Publications}
+    *Equal Contributions
+    \begin{onecolentry}
+    \input{publications_generated.tex}
+    \end{onecolentry}
+
+    \section{Academic Services}
+    \textbf{Reviewing}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Conference: ICLR 2026
+            \item Workshop: DELTA@ICLR-2025, FPI@NeurIPS-2025, SPIGM@NeurIPS-2025, DynaFront@NeurIPS-2025
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Supervision and Teaching}
+    \begin{twocolentry}
+        {
+        University of Cambridge
+        }
+    \textbf{MEng Project Supervision}
+    \end{twocolentry}
+    \begin{threecolentry}
+        {
+        \textit{Better Diffusion Models for Molecular Modelling}
+        
+        \textit{Towards better Neural Samplers for Boltzmann Distribution}
+        }
+        {
+        \textit{Oct 2024 - June 2025}
+        
+        \textit{Oct 2024 - June 2025}
+        }
+        Sunaabh Trivedi
+
+        Luran Wang
+    \end{threecolentry}
+    \begin{twocolentry}
+        {
+        University of Cambridge
+        }
+    \textbf{MPhil Thesis Supervision}
+    \end{twocolentry}
+    \begin{threecolentry}
+        {
+        \textit{Transferable Neural Transports for Parallel Tempering}
+        
+        \textit{Stochastic Interpolants in Hilbert Spaces}
+        }
+        {
+        \textit{Apr 2025 - Aug 2025}
+        
+        \textit{Apr 2025 - Aug 2025}
+        }
+        Antonio Franca
+
+        James Yu
+    \end{threecolentry}
+
+    % \section{Selected Projects}
+    %     \begin{twocolentry}{\textit{Jan 2024 – Mar 2024}}
+        
+    %     \textbf{The Family of Denoising Diffusion Probabilistic Models}
+    %     \end{twocolentry}
+
+    %     \vspace{0.10 cm}
+    %     \begin{onecolentry}
+    %         \begin{highlights}
+    %             \item Replicate codes and exps of DDPM and its variants (DDIM\&ImprovedDDPM) from scratch
+    %             \item Research on extension for Improved DDPM
+    %             \item Open source: \href{https://github.com/tonyauyeung/The-Family-of-DDPMs}{GitHub Repo}
+    %         \end{highlights}
+    %     \end{onecolentry}
+
+
+    %     \vspace{0.2 cm}
+
+    %     \begin{twocolentry}{\textit{Jan 2024 – Mar 2024}}
+        
+    %     \textbf{Federated Curriculum Learning}
+    %     \end{twocolentry}
+
+    %     \vspace{0.10 cm}
+    %     \begin{onecolentry}
+    %         \begin{highlights}
+    %             \item Research on applying Curriculum Learning scheme on Federated Learning: self-paced learning, teacher-transfer and deep mutual learning
+    %             \item Open source: \href{https://github.com/tonyauyeung/curriculum_learning_L361}{GitHub Repo}
+    %         \end{highlights}
+    %     \end{onecolentry}
+        
+    %     \vspace{0.2 cm}
+        
+    %     \begin{twocolentry}{\textit{Nov 2023 – Jan 2024}}
+        
+    %     \textbf{PPO in the Bayesian World}
+    %     \end{twocolentry}
+
+    %     \vspace{0.10 cm}
+    %     \begin{onecolentry}
+    %         \begin{highlights}
+    %             \item Research on performing Bayesian Optimization for Reinforcement Learning (Proximal Policy Optimization, PPO) hyper-parameters tuning
+    %             \item Research on using multi-fidelity simulations to speed up tuning
+    %             \item Open source: \href{https://github.com/tonyauyeung/PPO-in-the-Bayesian-World}{GitHub Repo}
+    %         \end{highlights}
+    %     \end{onecolentry}
+    
+\section{Awards and Achievements}
+\begin{twocolentry}
+    {\textit{2024}}
+
+    {\textbf{Distinction in MPhil Degree, University of Cambridge}}
+    
+    \textit{Ranked top \textbf{20\%} in MPhil in Machine Learning and Machine Intelligence}
+\end{twocolentry}
+\begin{twocolentry}
+    {\textit{2023}}
+
+    {\textbf{Travel and Research Grants, Wolfson College, University of Cambridge}}
+    
+    \textit{Award for supporting my travelling for conference}
+\end{twocolentry}
+\begin{twocolentry}
+    {\textit{2023}}
+
+    {\textbf{Outstanding Graduates, Harbin Institute of Technology (Shenzhen)}}
+    
+    \textit{Ranked top \textbf{10}\% in HITsz}
+\end{twocolentry}
+\begin{twocolentry}
+    {\textit{2023}}
+
+    {\textbf{Distinction in BEng Degree, Harbin Institute of Technology (Shenzhen)}}
+    
+    \textit{Ranked top \textbf{10}\% in BEng in Data Science}
+\end{twocolentry}
+\begin{twocolentry}
+    {\textit{2022}}
+
+    {\textbf{International Exchange Program Scholarship, HITsz}}
+    
+    \textit{Scholarship for visiting in Oxford, valued at abount \textbf{200,000} CNY}
+\end{twocolentry}
+\section{Others}
+\textbf{Athletic}
+\begin{twocolentry}
+{\textit{2023 - 2024}}
+
+{Player, Wolfson College (University of Cambridge) Football Varsity}
+\end{twocolentry}
+\begin{twocolentry}
+{\textit{2020 - 2023}}
+
+{Player, Harbin Institute of Technology (Shenzhen) Football Varsity}    
+\end{twocolentry}
+
+\begin{twocolentry}
+{\textit{2021 - 2023}}
+
+{Captain, Harbin Institute of Technology (Shenzhen) Science School Football Team}
+\end{twocolentry}
+
+\begin{twocolentry}
+{\textit{2023}}
+
+    2nd place of HITsz Football League Season 22-23
+\end{twocolentry}
+\begin{twocolentry}
+{\textit{2021}}
+
+    2nd place of HITsz Football League Season 20-21
+\end{twocolentry}
+\begin{twocolentry}
+{\textit{2021}}
+
+    2nd place of HITsz Futsal League Season 20-21
+\end{twocolentry}
+\begin{twocolentry}
+    {\textit{2020}}
+    
+    3rd place of HITsz Football League Season 19-20
+\end{twocolentry}
+
+% \textbf{Competitions}
+% \begin{twocolentry}
+% {\textit{2021}}
+
+% 2nd Prize - Contemporary Undergraduate Mathematical Contest in Modeling
+% \end{twocolentry}
+% \begin{twocolentry}
+%     {\textit{2020}}
+
+%     1st \space Prize - National College Students Mathematical Competition
+% \end{twocolentry}
+% \begin{twocolentry}
+%     {\textit{2020}}
+
+%     2nd Prize - Contemporary Undergraduate Mathematical Contest in Modeling
+% \end{twocolentry}
+% \textbf{Services}
+% \begin{twocolentry}
+%     {\textit{2021}}
+
+%     Student Representative of Harbin Institute of Technology, shenzhen
+% \end{twocolentry}
+\textbf{Languages}
+\begin{highlights}
+    \item Cantonese (1st Native)
+    \item Chinese Mandarin (2nd Native)
+    \item English (Professional working proficiency; IELT 7.0)
+    \item French (Elementary proficiency)
+\end{highlights}
+\end{document}
