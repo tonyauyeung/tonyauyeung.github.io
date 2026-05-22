@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 16th October 2000
     - name: Languages
-      value: English, Chinese, Cantonese
+      value: English < Chinese <= Cantonese
 
 - title: Education
   type: time_table
