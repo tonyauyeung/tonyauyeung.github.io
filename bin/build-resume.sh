@@ -13,6 +13,7 @@ if ! command -v pdflatex >/dev/null 2>&1; then
 fi
 
 python3 "${ROOT}/bin/generate-resume-publications.py"
+python3 "${ROOT}/bin/generate-resume-academic-service.py"
 
 mkdir -p "${PDF_DIR}"
 cd "${RESUME_DIR}"

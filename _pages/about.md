@@ -12,6 +12,24 @@ profile:
     <p>📮: <a href="mailto:ro352@cam.ac.uk">ro352@cam.ac.uk</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
+# Academic services below sync to the CV page (/cv/) and PDF (bin/build-resume.sh).
+academic_service:
+  enabled: true
+  items:
+    - role: conference reviewer
+      details: ICLR (2025–2026), ICML (2026), NeurIPS (2025–2026)
+      items:
+        - award: silver reviewer🥈 @ ICML (2026)
+    - role: workshop reviewer
+      details: >-
+        [DELTA@ICLR](https://delta-workshop.github.io/DeLTa2026/) (2025–2026),
+        [FPI@NeurIPS](https://fpineurips.framer.website/) (2025),
+        [SPIGM@NeurIPS](https://spigmworkshopv3.github.io/) (2025),
+        [DynaFront@NeurIPS](https://sites.google.com/view/dynafrontneurips25) (2025),
+        [SPIGM@ICML](https://spigmworkshop2026.github.io/) (2026),
+        [FoGen@ICML](https://fdgm-workshop.github.io/FDGM_ICML2026/) (2026)
+    - role: organizer
+      details: "[MolSS reading group](https://molss-reading-group.github.io/MolSS/) (Lead organizer)"
 social: true # includes social icons at the bottom of the page
 
 announcements:

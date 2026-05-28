@@ -115,6 +115,19 @@ layout: default
                 {% include cv/time_table.liquid %}
               {% elsif entry.type == 'list_groups' %}
                 {% include cv/list_groups.liquid %}
+              {% elsif entry.type == 'academic_service' %}
+                {% assign academic_service = site.data.academic_service %}
+                {% unless academic_service %}
+                  {% for p in site.pages %}
+                    {% if p.layout == 'about' and p.academic_service %}
+                      {% assign academic_service = p.academic_service %}
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% endunless %}
+                {% if academic_service and academic_service.enabled %}
+                  {% include cv/academic_service.liquid %}
+                {% endif %}
               {% else %}
                 {{ entry.contents }}
               {% endif %}
@@ -166,6 +179,19 @@ layout: default
                 {% include cv/time_table.liquid %}
               {% elsif entry.type == 'list_groups' %}
                 {% include cv/list_groups.liquid %}
+              {% elsif entry.type == 'academic_service' %}
+                {% assign academic_service = site.data.academic_service %}
+                {% unless academic_service %}
+                  {% for p in site.pages %}
+                    {% if p.layout == 'about' and p.academic_service %}
+                      {% assign academic_service = p.academic_service %}
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% endunless %}
+                {% if academic_service and academic_service.enabled %}
+                  {% include cv/academic_service.liquid %}
+                {% endif %}
               {% else %}
                 {{ entry.contents }}
               {% endif %}

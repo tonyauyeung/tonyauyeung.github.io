@@ -1,0 +1,31 @@
+{% if academic_service and academic_service.enabled %}
+  <ul>
+    {% for item in academic_service.items %}
+      <li>
+        <strong>{{ item.role }}</strong>{% if item.details %}: <span class="academic-service-details">{{ item.details | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}</span>{% endif %}
+        {% if item.items %}
+          {% for subitem in item.items %}
+            {% if subitem.award %}
+              <div class="academic-service-award"><strong>award:</strong> {{ subitem.award }}</div>
+            {% endif %}
+          {% endfor %}
+          {% assign plain_subitem_count = 0 %}
+          {% for subitem in item.items %}
+            {% unless subitem.award %}
+              {% assign plain_subitem_count = plain_subitem_count | plus: 1 %}
+            {% endunless %}
+          {% endfor %}
+          {% if plain_subitem_count > 0 %}
+            <ul class="academic-service-subitems">
+              {% for subitem in item.items %}
+                {% unless subitem.award %}
+                  <li>{{ subitem }}</li>
+                {% endunless %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

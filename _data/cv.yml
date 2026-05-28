@@ -50,6 +50,9 @@
       description:
         - Research about scalable graph neural networks
 
+- title: Academic Services
+  type: academic_service
+
 # - title: Academic Interests
 #   type: nested_list
 #   contents:

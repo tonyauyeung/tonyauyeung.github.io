@@ -922,6 +922,24 @@ footer.sticky-bottom {
       margin-bottom: 0;
     }
   }
+
+  .academic-service-details {
+    p {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  .academic-service-award {
+    margin-top: 0.15rem;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  ul.academic-service-subitems {
+    margin-top: 0.15rem;
+    margin-bottom: 0;
+  }
 }
 
 // Rouge Color Customization

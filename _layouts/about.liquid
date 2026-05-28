@@ -66,6 +66,14 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    {% if page.academic_service and page.academic_service.enabled %}
+      <div class="about-research-box mt-3" markdown="0">
+        <h3 class="about-research-box-title">academic services</h3>
+        {% assign academic_service = page.academic_service %}
+        {% include academic_service.liquid %}
+      </div>
+    {% endif %}
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">
