@@ -2,7 +2,10 @@
   <ul>
     {% for item in academic_service.items %}
       <li>
-        <strong>{{ item.role }}</strong>{% if item.details %}: <span class="academic-service-details">{{ item.details | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}</span>{% endif %}
+        <strong>{{ item.role }}</strong>
+        {%- if item.details -%}
+          : <span class="academic-service-details">{{ item.details | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}</span>
+        {%- endif %}
         {% if item.items %}
           {% for subitem in item.items %}
             {% if subitem.award %}

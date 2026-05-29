@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I gave an oral presentation for BNEM in *Workshop on ML4Molecules @ ELLIS 2024*.
+I gave an oral presentation for BNEM in _Workshop on ML4Molecules @ ELLIS 2024_.

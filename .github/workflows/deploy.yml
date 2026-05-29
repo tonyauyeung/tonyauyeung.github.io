@@ -96,9 +96,9 @@ jobs:
             texlive-latex-recommended \
             texlive-latex-extra \
             texlive-fonts-extra
+          pip3 install --upgrade -r requirements.txt
           chmod +x bin/build-resume.sh
           ./bin/build-resume.sh
-          pip3 install --upgrade -r requirements.txt
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹

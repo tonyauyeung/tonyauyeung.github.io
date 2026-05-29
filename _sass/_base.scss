@@ -734,7 +734,10 @@ footer.sticky-bottom {
         border-radius: 0.5rem;
         padding: 0.9rem 0.75rem;
         margin: 0;
-        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
       }
 
       .publication-card:hover {

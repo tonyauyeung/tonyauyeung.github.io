@@ -15,7 +15,7 @@ nav_order: 3
 #   # - title: divider
 #   - title: repositories
 #     permalink: /repositories/
-  # - title: divider
-  # -title: teaching
-  #   permalink: /teaching/
+# - title: divider
+# -title: teaching
+#   permalink: /teaching/
 ---

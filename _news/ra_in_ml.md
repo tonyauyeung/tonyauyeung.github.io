@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I started a new position as *Research Assistant in Machine Learning* @ Cambridge.
+I started a new position as _Research Assistant in Machine Learning_ @ Cambridge.

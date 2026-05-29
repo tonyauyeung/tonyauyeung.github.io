@@ -6,7 +6,7 @@ inline: true
 related_posts: false
 ---
 
-I completed *MPhil in Machine Learning and Machine Intelligence* @ Cambridge 🎓.
+I completed _MPhil in Machine Learning and Machine Intelligence_ @ Cambridge 🎓.
 
 <!-- ---
 

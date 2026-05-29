@@ -5,4 +5,4 @@ inline: true
 related_post: false
 ---
 
-I start my PhD in the Machine Learning Group @ Cambridge, fully funded by the *DLA* scholarship 🍦.
+I start my PhD in the Machine Learning Group @ Cambridge, fully funded by the _DLA_ scholarship 🍦.

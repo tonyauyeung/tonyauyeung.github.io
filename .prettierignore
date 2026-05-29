@@ -1,3 +1,6 @@
+.pip_packages/**
+node_modules/**
+.tmp-prettier/**
 **/*.map
 **/*.min.css
 **/*.min.js

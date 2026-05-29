@@ -21,7 +21,9 @@
           <ul class="subitems">
             {% for subitem in item.items %}
               {% unless subitem.award %}
-                <li><span class="subitem">{{ subitem }}</span></li>
+                <li>
+                  <span class="subitem">{{ subitem }}</span>
+                </li>
               {% endunless %}
             {% endfor %}
           </ul>

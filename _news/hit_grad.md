@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I completed *BEng in Data Science* @ HITsz 🎓.
+I completed _BEng in Data Science_ @ HITsz 🎓.

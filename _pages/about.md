@@ -42,6 +42,7 @@ announcements:
 #   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
 #   limit: 3 # leave blank to include all the blog posts
 ---
+
 Hi there 👋. I'm Tony RuiKang OuYang (歐陽瑞康 in Chinese; SeoiHong AuYeung pronounced in Cantonese). I'm an first-year PhD in Machine Learning 🤖 at the [Machine Learning Group](https://mlg.eng.cam.ac.uk/about.html), University of Cambridge, supervised by [Prof. José Miguel Hernández-Lobato](https://jmhl.org) and fully funded by the _EPSRA DLA_ scholarship.
 
 I completed [MPhil in Machine Learning and Machine Intelligence](https://www.mlmi.eng.cam.ac.uk) from the University of Cambridge, where I graduated with distinction and worked with [Prof. José Miguel Hernández-Lobato](https://jmhl.org) on energy-based neural sampler for sampling from Boltzmann distribution. Prior to that, I finished my BEng in Data Science in [Harbin Institute of Technology, Shenzhen (HITsz)](http://en.hitsz.edu.cn) and spent a wonderful year visiting in the [University of Oxford](https://www.spc.ox.ac.uk/study-here/visiting-students) studying Mathematics and Statistics (fully-funded by HITsz).
@@ -63,4 +64,3 @@ I am always open to discussion and collaboration, feel free to reach out!
 </div>
 <!-- 
 My current research interests include <u>generative models</u>, <u>energy-based models</u>, <u>sampling methods</u>, and their interactions and also their applications to <u>molecular sciences</u> 🧬. Generally, I'm interested in <u>probabilistic machine learning</u> and <u>AI4Science</u>, especially developing powerful, efficient, and scalable methods that can be applied to physics ⚛️ and biochemistry 🧪. -->
-
