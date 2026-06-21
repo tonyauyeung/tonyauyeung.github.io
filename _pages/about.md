@@ -16,6 +16,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 academic_service:
   enabled: true
   items:
+    - role: journal reviewer
+      details: TMLR (2026)
     - role: conference reviewer
       details: ICLR (2025–2026), ICML (2026), NeurIPS (2025–2026)
       items:
@@ -27,7 +29,8 @@ academic_service:
         [SPIGM@NeurIPS](https://spigmworkshopv3.github.io/) (2025),
         [DynaFront@NeurIPS](https://sites.google.com/view/dynafrontneurips25) (2025),
         [SPIGM@ICML](https://spigmworkshop2026.github.io/) (2026),
-        [FoGen@ICML](https://fdgm-workshop.github.io/FDGM_ICML2026/) (2026)
+        [FoGen@ICML](https://fdgm-workshop.github.io/FDGM_ICML2026/) (2026),
+        [NonAR-LM@COLT](https://pengzhangzhi.github.io/NonAR-LM/#top) (2026)
     - role: organizer
       details: "[MolSS reading group](https://molss-reading-group.github.io/MolSS/) (Lead organizer)"
 social: true # includes social icons at the bottom of the page
