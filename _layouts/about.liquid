@@ -19,18 +19,30 @@ layout: default
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_dark %}
+            {% assign profile_image_dark_path = page.profile.image_dark | prepend: 'assets/img/' %}
+          {% else %}
+            {% assign profile_image_dark_path = page.profile.image | prepend: 'assets/img/' %}
+          {% endif %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
             {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
           {% endif %}
+          {% assign profile_image_class = profile_image_class | append: ' profile-image-light' %}
+          {% assign profile_image_dark_class = profile_image_class | replace: ' profile-image-light', ' profile-image-dark' %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          <div class="profile-image-stack">
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
+            {% if page.profile.image_dark %}
+              {% include figure.liquid loading="eager" path=profile_image_dark_path class=profile_image_dark_class sizes=sizes alt=page.profile.image_dark cache_bust=true %}
+            {% endif %}
+          </div>
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
@@ -38,9 +50,10 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="clearfix">
+      {{ content }}
 
-    {% comment %}
+      {% comment %}
       <!-- News -->
       {% if page.announcements and page.announcements.enabled %}
         <h2>
@@ -50,29 +63,34 @@ layout: default
       {% endif %}
     {% endcomment %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
+      <!-- Latest posts -->
+      {% if page.latest_posts and page.latest_posts.enabled %}
+        <h2>
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      {% endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
+      <!-- Selected papers -->
+      {% if page.selected_papers %}
+        <details class="about-research-box selected-publications-box mt-3 about-research-box-gap-narrow" markdown="0">
+          <summary class="about-research-box-title">selected publications</summary>
+          <div class="about-collapsible-content">
+            {% include selected_papers.liquid class='selected-publications-list' %}
+          </div>
+        </details>
+      {% endif %}
 
-    {% if page.academic_service and page.academic_service.enabled %}
-      <div class="about-research-box mt-3" markdown="0">
-        <h3 class="about-research-box-title">academic services</h3>
-        {% assign academic_service = page.academic_service %}
-        {% include academic_service.liquid %}
-      </div>
-    {% endif %}
+      {% if page.academic_service and page.academic_service.enabled %}
+        <details class="about-research-box mt-3 about-research-box-gap-narrow" markdown="0">
+          <summary class="about-research-box-title">academic services</summary>
+          <div class="about-collapsible-content">
+            {% assign academic_service = page.academic_service %}
+            {% include academic_service.liquid %}
+          </div>
+        </details>
+      {% endif %}
+    </div>
 
     <!-- Social -->
     {% if page.social %}

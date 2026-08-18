@@ -2,6 +2,15 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+html {
+  font-family: var(--font-sans);
+  font-size: var(--font-text-md-size);
+  line-height: var(--font-text-md-line-height);
+  color: var(--global-text-color);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 // Typography
 
 p,
@@ -195,6 +204,42 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  .profile-image-stack {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  .profile-image-stack figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-image-light,
+  .profile-image-dark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .profile-image-dark {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -203,6 +248,20 @@ ul.task-list input[type="checkbox"] {
     p {
       display: inline-block;
       margin: 0;
+    }
+  }
+}
+
+html[data-theme="dark"] {
+  .profile {
+    .profile-image-dark {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .profile-image-light {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
@@ -554,7 +613,8 @@ footer.sticky-bottom {
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 2.5rem;
+    line-height: var(--font-heading-lg-line-height);
   }
 }
 
@@ -696,6 +756,7 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
+  background-color: var(--global-bg-color);
 
   h1 {
     color: var(--global-theme-color);
@@ -730,6 +791,7 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .publication-card {
+        background-color: var(--global-card-bg-color);
         border: 1px solid var(--global-divider-color);
         border-radius: 0.5rem;
         padding: 0.9rem 0.75rem;
@@ -893,7 +955,7 @@ footer.sticky-bottom {
   border: 1px solid var(--global-divider-color);
   border-radius: 0.5rem;
   padding: 0.9rem 0.75rem;
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.25rem;
   background-color: var(--global-card-bg-color);
   transition:
     transform 0.2s ease,
@@ -906,11 +968,56 @@ footer.sticky-bottom {
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
   }
 
+  summary {
+    cursor: pointer;
+    list-style: none;
+    display: block;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
   .about-research-box-title {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
     color: var(--global-text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    &::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 0;
+      height: 0;
+      border-top: 0.36rem solid transparent;
+      border-bottom: 0.36rem solid transparent;
+      border-left: 0.55rem solid var(--global-text-color);
+      transform: translateY(1px) rotate(0deg);
+      transform-origin: 35% 50%;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  .about-research-box-title {
+    @media (pointer: coarse) {
+      min-height: 44px;
+    }
+  }
+
+  &[open] .about-research-box-title::before {
+    transform: rotate(90deg);
+  }
+
+  .about-collapsible-content {
+    margin-top: -0.25rem;
+  }
+
+  &.about-research-box-gap-narrow {
+    margin-bottom: 1.2rem !important;
+    margin-top: 0.75rem;
   }
 
   ul {
@@ -943,6 +1050,16 @@ footer.sticky-bottom {
     margin-top: 0.15rem;
     margin-bottom: 0;
   }
+}
+
+.selected-publications-box {
+  background-color: var(--global-bg-color) !important;
+}
+
+.selected-publications-box .selected-publications-list .publication-card,
+.selected-publications-box .selected-publications-list ol.bibliography li {
+  background-color: var(--global-card-bg-color);
+  border-color: var(--global-divider-color);
 }
 
 // Rouge Color Customization

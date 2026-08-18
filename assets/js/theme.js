@@ -24,6 +24,7 @@ let setThemeSetting = (themeSetting) => {
 // Apply the computed dark or light theme to the website.
 let applyTheme = () => {
   let theme = determineComputedTheme();
+  const themeSetting = determineThemeSetting();
 
   transTheme();
   setHighlight(theme);
@@ -81,6 +82,16 @@ let applyTheme = () => {
       background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
     });
   }
+
+  // Inform page-specific scripts that the theme has been re-applied.
+  document.dispatchEvent(
+    new CustomEvent("theme:changed", {
+      detail: {
+        themeSetting,
+        theme,
+      },
+    })
+  );
 };
 
 let setHighlight = (theme) => {
@@ -122,6 +133,12 @@ let addMermaidZoom = (records, observer) => {
 };
 
 let setMermaidTheme = (theme) => {
+  const getSourceText = (element, selector = "code") => {
+    const sourceElement = element.previousElementSibling;
+    const codeElement = sourceElement?.querySelector(selector);
+    return codeElement ? codeElement.textContent.trim() : "";
+  };
+
   if (theme == "light") {
     // light theme name in mermaid is 'default'
     // https://mermaid.js.org/config/theming.html#available-themes
@@ -131,7 +148,7 @@ let setMermaidTheme = (theme) => {
   /* Re-render the SVG, based on https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/mermaid.html */
   document.querySelectorAll(".mermaid").forEach((elem) => {
     // Get the code block content from previous element, since it is the mermaid code itself as defined in Markdown, but it is hidden
-    let svgCode = elem.previousSibling.childNodes[0].innerHTML;
+    const svgCode = getSourceText(elem);
     elem.removeAttribute("data-processed");
     elem.innerHTML = svgCode;
   });
@@ -148,9 +165,15 @@ let setMermaidTheme = (theme) => {
 };
 
 let setDiff2htmlTheme = (theme) => {
+  const getSourceText = (element, selector = "code") => {
+    const sourceElement = element.previousElementSibling;
+    const codeElement = sourceElement?.querySelector(selector);
+    return codeElement ? codeElement.textContent.trim() : "";
+  };
+
   document.querySelectorAll(".diff2html").forEach((elem) => {
     // Get the code block content from previous element, since it is the diff code itself as defined in Markdown, but it is hidden
-    let textData = elem.previousSibling.childNodes[0].innerHTML;
+    const textData = getSourceText(elem);
     elem.innerHTML = "";
     const configuration = { colorScheme: theme, drawFileList: true, highlight: true, matching: "lines" };
     const diff2htmlUi = new Diff2HtmlUI(elem, textData, configuration);
@@ -159,10 +182,24 @@ let setDiff2htmlTheme = (theme) => {
 };
 
 let setEchartsTheme = (theme) => {
+  const getSourceText = (element, selector = "code") => {
+    const sourceElement = element.previousElementSibling;
+    const codeElement = sourceElement?.querySelector(selector);
+    return codeElement ? codeElement.textContent.trim() : "";
+  };
+
   document.querySelectorAll(".echarts").forEach((elem) => {
     // Get the code block content from previous element, since it is the echarts code itself as defined in Markdown, but it is hidden
-    let jsonData = elem.previousSibling.childNodes[0].innerHTML;
+    const sourceText = getSourceText(elem);
     echarts.dispose(elem);
+
+    let option;
+    try {
+      option = JSON.parse(sourceText);
+    } catch (error) {
+      console.error("Failed to parse ECharts JSON while re-rendering for theme switch", error);
+      return;
+    }
 
     if (theme === "dark") {
       var chart = echarts.init(elem, "dark-fresh-cut");
@@ -170,19 +207,35 @@ let setEchartsTheme = (theme) => {
       var chart = echarts.init(elem);
     }
 
-    chart.setOption(JSON.parse(jsonData));
+    chart.setOption(option, true);
+    chart.resize();
   });
 };
 
 let setVegaLiteTheme = (theme) => {
+  const getSourceText = (element, selector = "code") => {
+    const sourceElement = element.previousElementSibling;
+    const codeElement = sourceElement?.querySelector(selector);
+    return codeElement ? codeElement.textContent.trim() : "";
+  };
+
   document.querySelectorAll(".vega-lite").forEach((elem) => {
     // Get the code block content from previous element, since it is the vega lite code itself as defined in Markdown, but it is hidden
-    let jsonData = elem.previousSibling.childNodes[0].innerHTML;
+    const sourceText = getSourceText(elem);
     elem.innerHTML = "";
+
+    let spec;
+    try {
+      spec = JSON.parse(sourceText);
+    } catch (error) {
+      console.error("Failed to parse Vega-Lite JSON while re-rendering for theme switch", error);
+      return;
+    }
+
     if (theme === "dark") {
-      vegaEmbed(elem, JSON.parse(jsonData), { theme: "dark" });
+      vegaEmbed(elem, spec, { theme: "dark" });
     } else {
-      vegaEmbed(elem, JSON.parse(jsonData));
+      vegaEmbed(elem, spec);
     }
   });
 };

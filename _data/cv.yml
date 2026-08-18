@@ -6,7 +6,7 @@
     - name: Since
       value: October 2000
     - name: Languages
-      value: English < Chinese <= Cantonese
+      value: English < Chinese ≤ Cantonese
 
 - title: Education
   type: time_table
@@ -38,6 +38,11 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Research Scientist Intern
+      institution: <a href="https://anewbt.com">AnewLabs</a> | former Seed@ByteDance
+      year: 2026.7-present
+      description:
+        - Working on generative models for protein equilibrium sampling
     - title: Research Assistant in Machine Learning
       institution: Machine Learning Group, Department of Engineering, University of Cambridge
       year: 2024.11-2025.10

@@ -6,8 +6,8 @@
   - [Local setup on Windows](#local-setup-on-windows)
   - [Local setup using Docker (Recommended)](#local-setup-using-docker-recommended)
     - [Build your own docker image](#build-your-own-docker-image)
-  - [Local Setup with Development Containers](#local-setup-with-development-containers)
-  - [Local Setup (Legacy, no longer supported)](#local-setup-legacy-no-longer-supported)
+- [Local Setup with Development Containers](#local-setup-with-development-containers)
+- [Local Setup (Legacy, no longer supported)](#local-setup-legacy-no-longer-supported)
   - [Deployment](#deployment)
     - [For personal and organization webpages](#for-personal-and-organization-webpages)
     - [For project pages](#for-project-pages)
@@ -60,6 +60,45 @@ Note that when you run it for the first time, it will download a docker image of
 Now, feel free to customize the theme however you like (don't forget to change the name!). Also, your changes should be automatically rendered in real-time (or maybe after a few seconds).
 
 > Beta: You can also use the slimmed docker image with a size below 100MBs and exact same functionality. Just use `docker compose -f docker-compose-slim.yml up`
+
+### Fast local setup (scripted)
+
+If you prefer a one-command local workflow without manually installing dependencies each time, use:
+
+```bash
+$ chmod +x bin/local-compile.sh
+$ ./bin/local-compile.sh
+```
+
+The script will:
+
+- install local Ruby/Python dependencies,
+- install required Python packages,
+- run the resume build step when LaTeX is available,
+- start Jekyll at `http://localhost:4000`.
+
+On this machine, we recommend Docker usage:
+
+```bash
+$ ./bin/local-compile.sh --docker --build    # build only
+$ ./bin/local-compile.sh --docker            # live preview in browser
+```
+
+The Docker container serves the site on `http://localhost:8080`.
+
+If your system Ruby is older than 3.3.5, the script will guide you to install Ruby 3.3.5 locally or use the Docker flow:
+
+```bash
+$ brew install ruby@3.3
+```
+
+Then reopen your shell (or run `eval "$(brew shellenv)"`) and retry `./bin/local-compile.sh`.
+
+Useful variants:
+
+- `./bin/local-compile.sh --build` (build to `_site`)
+- `./bin/local-compile.sh --docker` (force Docker-based flow)
+- `./bin/local-compile.sh --host 0.0.0.0 --port 8080` (custom host/port)
 
 ### Build your own docker image
 

@@ -282,16 +282,3 @@
     {% endif %}
   </div>
 </div>
-
-<!-- Minimal inline handler to toggle .star like .award -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.links a.star').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        const row = btn.closest('.row') || btn.closest('.teaser') || btn.parentElement;
-        const panel = row && row.querySelector('div.star');
-        if (panel) panel.classList.toggle('hidden');
-      });
-    });
-  });
-</script>
