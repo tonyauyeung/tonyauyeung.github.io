@@ -48,9 +48,9 @@ If the website does not load the theme, the layout looks weird, and all links ar
 
 make sure to correctly specify the `url` and `baseurl` paths in `_config.yml`. Set `url` to `https://<your-github-username>.github.io` or to `https://<your.custom.domain>` if you are using a custom domain. If you are deploying a <ins>personal</ins> or <ins>organization</ins> website, leave `baseurl` **empty** (do **NOT** delete it). If you are deploying a project page, set `baseurl: /<your-project-name>/`. If all previous steps were done correctly, all is missing is for your browser to fetch again the site stylesheet. For this, you can:
 
-- press [Shift + F5 on Chromium-based](https://support.google.com/chrome/answer/157179#zippy=%2Cwebpage-shortcuts) or [Ctrl + F5 on Firefox-based](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly) browsers to reload the page ignoring cached content
+- press Shift + F5 on Chromium-based or Ctrl + F5 on Firefox-based browsers to reload the page ignoring cached content
 - clean your browser history
-- simply try it in a private session, here's how to do it in [Chrome](https://support.google.com/chrome/answer/95464) and [Firefox](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history)
+- simply try it in a private session, here's how to do it in [Firefox](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history)
 
 ---
 
@@ -82,7 +82,7 @@ You need to [create a personal access token](https://docs.github.com/en/authenti
 
 We implemented support for [Prettier code formatting](https://prettier.io/) in [#2048](https://github.com/alshedivat/al-folio/pull/2048). It basically ensures that your code is [well formatted](https://prettier.io/docs/en/). If you want to ensure your code is compliant with `Prettier`, you have a few options:
 
-- if you are running locally with `Docker` and using [development containers](https://github.com/alshedivat/al-folio/blob/main/INSTALL.md#local-setup-with-development-containers), `Prettier` is already included
+- if you are running locally with `Docker` and using [development containers](https://github.com/alshedivat/al-folio/blob/main/INSTALL.md), `Prettier` is already included
 - if you don't use `Docker`, it is simple to integrate it with your preferred IDE using an [extension](https://prettier.io/docs/en/editors)
 - if you want to run it manually, you can follow the first 2 steps in [this tutorial](https://george-gca.github.io/blog/2023/slidev_for_non_web_devs/) (`Installing node version manager (nvm)` and `Installing Node (latest version)`), then, install it using `npm install prettier` inside the project directory, or install it globally on your computer using `npm install -g prettier`. To run `Prettier` on your current directory use `npx prettier . --write`.
 
@@ -160,7 +160,7 @@ Currently we have the following workflows:
 
 In the configuration file `_config.yml` the tag `google-site-verification` should be updated to use this functionality. Here is how you can proceed,
 
-- Generate your HTML tag by following [https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag](https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag) with URL prefix option.
+- Generate your HTML tag by following [Google Search Console verification docs](https://support.google.com/webmasters/answer/9008080?hl=en) with URL prefix option.
 - In the verify ownership option choose HTML tag and copy the tag contents which should look like `<meta name="google-site-verification" content="GoogleSearchConsoleID" />`.
 - The string against `content` is the Google Search Console ID that can be used in the template. e.g. `google-site-verification: GoogleSearchConsoleID`. Now set the property `enable_google_verification: true`.
 

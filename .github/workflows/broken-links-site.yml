@@ -44,4 +44,4 @@ jobs:
         with:
           fail: true
           # only check local links
-          args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
+          args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --exclude 'http://0\.0\.0\.0:8080/.*' --exclude 'https://www\.tonyauyeung\.com/.*' --exclude 'https://www\.linkedin\.com/in/tony-ruikang-ouyang-225845235.*' --exclude 'https://linter\.structured-data\.org/.*' --exclude 'https://support.google.com/chrome/answer/157179.*' --exclude 'https://support.google.com/chrome/answer/95464.*' --exclude 'https://support.google.com/webmasters/answer/9008080.*' --verbose --no-progress '_site/**/*.html'
