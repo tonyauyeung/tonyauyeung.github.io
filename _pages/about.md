@@ -250,7 +250,7 @@ I am always open to discussion and collaboration, feel free to reach out!
 <details class="about-research-box mt-3 about-research-box-gap-narrow" markdown="0">
   <summary class="about-research-box-title">news</summary>
   <ul>
-    <li><strong>2026-07-13:</strong> I'm interning at <a href="https://anewbt.com">AnewLabs</a>, an aidd startup spinned-off from Seed@ByteDance recently. Working on equilibrium sampling model for proteins.</li>
+    <li><strong>2026-07:</strong> I'm interning at <a href="https://anewbt.com">AnewLabs</a>, an aidd startup spinned-off from Seed@ByteDance recently. Working on equilibrium sampling model for proteins.</li>
   </ul>
 </details>
 
