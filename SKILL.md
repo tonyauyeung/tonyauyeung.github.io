@@ -48,4 +48,3 @@ Use Jekyll-native workflows for this repo unless the user asks for an alternativ
 - Keep new content minimal in diffs: small, isolated edits per task.
 - Prefer existing layout patterns before creating new templates.
 - If a page build fails, start by checking `_config.yml` syntax and front matter formatting.
-
