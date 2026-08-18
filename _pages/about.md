@@ -52,7 +52,7 @@ Hi there 👋. I'm Tony RuiKang OuYang (歐陽瑞康 in Chinese; SeoiHong AuYeun
 
 I completed [MPhil in Machine Learning and Machine Intelligence](https://www.mlmi.eng.cam.ac.uk) from the University of Cambridge, where I graduated with distinction and worked with [Prof. José Miguel Hernández-Lobato](https://jmhl.org) on energy-based neural sampler for sampling from Boltzmann distribution. Prior to that, I finished my BEng in Data Science in [Harbin Institute of Technology, Shenzhen (HITsz)](http://en.hitsz.edu.cn) and spent a wonderful year visiting in the [University of Oxford](https://www.spc.ox.ac.uk/study-here/visiting-students) studying Mathematics and Statistics (fully-funded by HITsz).
 
-I lead the [MolSS Reading Group](https://molss-reading-group.github.io/MolSS/), which invites top researchers to share their works on <u>machine learning for molecular sciences</u>. Save our [website](https://molss-reading-group.github.io/MolSS/) and join our [Slack-channel](https://join.slack.com/t/molss/shared_invite/zt-35u93vepd-H83ftzwBbPCYY31jHcnM8A) to stay tuned 🚀
+I lead the [MolSS Reading Group](https://molss-reading-group.github.io/MolSS/), which invites top researchers to share their works on <u>machine learning for molecular sciences</u>. Save our [website](https://molss-reading-group.github.io/MolSS/) and join our Slack channel to stay tuned 🚀
 
 I play football (midfield) ⚽️
 
