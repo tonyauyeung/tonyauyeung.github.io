@@ -326,6 +326,159 @@ html[data-theme="dark"] {
   }
 }
 
+#navbarNav {
+  position: relative;
+}
+
+.navbar-nav {
+  margin-top: 0;
+}
+
+.pet-brand-cluster {
+  display: flex;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.pet-runner {
+  --diudiu-scale: 0.23;
+  --diudiu-frame-width: 192px;
+  --diudiu-frame-height: 208px;
+  --diudiu-frame-stride-x: calc(var(--diudiu-frame-width) * var(--diudiu-scale));
+  --diudiu-frame-stride-y: calc(var(--diudiu-frame-height) * var(--diudiu-scale));
+  position: relative;
+  left: 0;
+  top: -2px;
+  margin-right: 0.1rem;
+  width: calc(var(--diudiu-frame-width) * var(--diudiu-scale));
+  height: calc(var(--diudiu-frame-height) * var(--diudiu-scale));
+  pointer-events: none;
+  z-index: 2;
+  display: block;
+}
+
+.pet-runner .diudiu-pet {
+  position: relative;
+  display: block;
+  left: 0;
+  top: 0;
+  width: calc(var(--diudiu-frame-width) * var(--diudiu-scale));
+  height: calc(var(--diudiu-frame-height) * var(--diudiu-scale));
+  background-image: var(--diudiu-sprite, url('/assets/img/pets/diudiu/spritesheet.webp'));
+  background-size: calc(1536px * var(--diudiu-scale)) calc(2288px * var(--diudiu-scale));
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 0 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pet-runner .diudiu-pet.diudiu-state--sit {
+  animation: diudiu-sit 2.2s ease-in-out infinite;
+  background-position: 0 calc(-1 * var(--diudiu-frame-stride-y) * 2);
+}
+
+.pet-runner .diudiu-pet.diudiu-state--run {
+  animation: diudiu-run 1s steps(1) infinite;
+  background-position-y: calc(-1 * var(--diudiu-frame-stride-y) * 1);
+}
+
+.pet-runner .diudiu-pet.diudiu-state--idle {
+  animation: diudiu-idle 2.8s ease-in-out infinite;
+  background-position-y: calc(-1 * var(--diudiu-frame-stride-y) * 3);
+}
+
+.pet-runner .diudiu-pet.diudiu-state--static {
+  animation: none;
+  background-position-y: calc(-1 * var(--diudiu-frame-stride-y) * 4);
+}
+
+.pet-runner .diudiu-pet.diudiu-state--jump {
+  animation: diudiu-jump 1.5s ease-in-out infinite;
+  background-position-y: calc(-1 * var(--diudiu-frame-stride-y) * 5);
+}
+
+.navbar-nav .nav-item .nav-link,
+.navbar-nav .nav-item button {
+  position: relative;
+  font-size: 1rem;
+}
+
+@keyframes diudiu-sit {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes diudiu-run {
+  0% {
+    background-position-x: 0;
+  }
+  12.5% {
+    background-position-x: calc(-1 * var(--diudiu-frame-stride-x));
+  }
+  25% {
+    background-position-x: calc(-2 * var(--diudiu-frame-stride-x));
+  }
+  37.5% {
+    background-position-x: calc(-3 * var(--diudiu-frame-stride-x));
+  }
+  50% {
+    background-position-x: calc(-4 * var(--diudiu-frame-stride-x));
+  }
+  62.5% {
+    background-position-x: calc(-5 * var(--diudiu-frame-stride-x));
+  }
+  75% {
+    background-position-x: calc(-6 * var(--diudiu-frame-stride-x));
+  }
+  87.5% {
+    background-position-x: calc(-7 * var(--diudiu-frame-stride-x));
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+
+@keyframes diudiu-idle {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(-0.5px) translateY(1px) scaleX(0.99);
+  }
+}
+
+@keyframes diudiu-jump {
+  0% {
+    transform: translateY(0);
+    background-position-x: 0;
+  }
+  20% {
+    transform: translateY(-6px);
+    background-position-x: calc(-1 * var(--diudiu-frame-stride-x));
+  }
+  40% {
+    background-position-x: calc(-2 * var(--diudiu-frame-stride-x));
+  }
+  60% {
+    transform: translateY(0);
+    background-position-x: calc(-3 * var(--diudiu-frame-stride-x));
+  }
+  80% {
+    background-position-x: calc(-4 * var(--diudiu-frame-stride-x));
+  }
+  100% {
+    transform: translateY(0);
+    background-position-x: 0;
+  }
+}
+
 .dropdown-item {
   color: var(--global-text-color);
 
