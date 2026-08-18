@@ -101,7 +101,7 @@ ninja.data = [{
         title: 'Custom_social',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.tonyauyeung.com/", "_blank");
+          window.open("https://github.com/tonyauyeung", "_blank");
         },
       },{
       id: 'light-theme',
