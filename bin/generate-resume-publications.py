@@ -78,10 +78,7 @@ def split_author(author: str) -> tuple[str, str, str]:
 
 def format_author(author: str) -> str:
     last, first, suffix = split_author(author)
-    if last and first:
-        display = f"{last}, {first}{suffix}"
-    else:
-        display = f"{author}{suffix}"
+    display = f"{last}{suffix}"
 
     if is_self_author(last, first):
         return f"\\textbf{{{display}}}"
@@ -137,9 +134,11 @@ def format_entry(entry: dict) -> str:
     authors = format_authors(entry["author"])
     title = entry.get("title", "").strip().strip("{}")
     where = venue(entry)
+    note = entry.get("note", "").strip()
+    note_text = f" {note}" if note else ""
     return (
         f"        \\item {authors}{year_suffix(entry)}. "
-        f"{{\\color{{teal}}{title}}}. \\textit{{{where}}}."
+        f"{{\\color{{teal}}{title}}}. \\textit{{{where}}}.{note_text}"
     )
 
 
@@ -147,7 +146,9 @@ def main() -> None:
     entries = load_bib_entries()
     entries.sort(key=lambda e: int(e.get("year", "0")), reverse=True)
 
-    lines = ["    \\begin{itemize}"]
+    lines = [
+        "    \\begin{itemize}[topsep=0.10 cm, partopsep=0pt, parsep=0pt, itemsep=0.05 cm, before={\\interlinepenalty10000\\relax}]"
+    ]
     lines.extend(format_entry(entry) for entry in entries)
     lines.append("    \\end{itemize}")
 

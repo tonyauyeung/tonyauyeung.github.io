@@ -20,7 +20,7 @@ academic_service:
     - role: journal reviewer
       details: TMLR (2026)
     - role: conference reviewer
-      details: ICLR (2025–2026), ICML (2026), NeurIPS (2025–2026)
+      details: ICLR (2025–2027), ICML (2026), NeurIPS (2025–2026), AISTATS (2027)
       items:
         - award: silver reviewer🥈 @ ICML (2026)
     - role: workshop reviewer
@@ -250,6 +250,7 @@ I am always open to discussion and collaboration, feel free to reach out!
 <details class="about-research-box mt-3 about-research-box-gap-narrow" markdown="0">
   <summary class="about-research-box-title">news</summary>
   <ul>
+    <li><strong>2026-09:</strong> Two papers (<a href="https://arxiv.org/abs/2606.29110">Scallop</a> and <a href="https://arxiv.org/abs/2605.26850">stNCE</a>) are accepted by NeurIPS 2026! See you in Australia 🐨 🦘 🏝️ </li>
     <li><strong>2026-07:</strong> I'm interning at <a href="https://anewbt.com">AnewLabs</a>, an aidd startup spinned-off from Seed@ByteDance recently. Working on equilibrium sampling model for proteins.</li>
   </ul>
 </details>

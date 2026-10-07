@@ -3,11 +3,11 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
+    top=1.5 cm, % seperation between body and page edge from the top
+    bottom=1.5 cm, % seperation between body and page edge from the bottom
     left=2 cm, % seperation between body and page edge from the left
     right=2 cm, % seperation between body and page edge from the right
-    footskip=1.0 cm, % seperation between body and footer
+    footskip=0.8 cm, % seperation between body and footer
     % showframe % for debugging 
 ]{geometry} % for adjusting page geometry
 \usepackage{titlesec} % for customizing section titles
@@ -34,6 +34,7 @@
 \usepackage{ifthen} % for conditional statements
 \usepackage{needspace} % for avoiding page brake right after the section title
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{etoolbox} % environment hooks and footer customization
 
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
@@ -231,7 +232,7 @@
         \textit{Oct 2025 – June 2028}}
             \textbf{University of Cambridge}
 
-            \textit{DPhil in Advanced Machine Learning}
+            \textit{PhD in Advanced Machine Learning}
         \end{twocolentry}
 
         \vspace{0.10 cm}
@@ -293,6 +294,19 @@
         \end{onecolentry}
 
     \section{Experiences}
+        \begin{twocolentry}{
+        \textit{July 2026 - present}}
+            \textbf{\href{https://anewbt.com}{AnewLabs} | former Seed@ByteDance}
+
+            \textit{Research Scientist Intern}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Working on generative models for protein equilibrium sampling
+            \end{highlights}
+        \end{onecolentry}
         \begin{twocolentry}{
         \textit{London, UK}    
             
@@ -377,21 +391,15 @@
         }
     \textbf{MPhil Thesis Supervision}
     \end{twocolentry}
-    \begin{threecolentry}
-        {
-        \textit{Transferable Neural Transports for Parallel Tempering}
-        
-        \textit{Stochastic Interpolants in Hilbert Spaces}
-        }
-        {
-        \textit{Apr 2025 - Aug 2025}
-        
-        \textit{Apr 2025 - Aug 2025}
-        }
-        Antonio Franca
-
-        James Yu
-    \end{threecolentry}
+    \begin{onecolentry}
+        \begin{tabularx}{\linewidth}{@{}p{3.0cm}Xr@{}}
+            Csaba Dékány & \textit{Generative Models for Large-scale Materials} & \textit{Apr 2026 - Aug 2026} \\
+            Ishaanvi Agrawal & \textit{Generative Models for Large-Scale Materials} & \textit{Apr 2026 - Aug 2026} \\
+            Shanzi Bao & \textit{Exact-Density Flow Maps for Boltzmann Sampling} & \textit{Apr 2026 - Aug 2026} \\
+            Antonio Franca & \textit{Transferable Neural Transports for Parallel Tempering} & \textit{Apr 2025 - Aug 2025} \\
+            James Yu & \textit{Stochastic Interpolants in Hilbert Spaces} & \textit{Apr 2025 - Aug 2025} \\
+        \end{tabularx}
+    \end{onecolentry}
 
     % \section{Selected Projects}
     %     \begin{twocolentry}{\textit{Jan 2024 – Mar 2024}}
