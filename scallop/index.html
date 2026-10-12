@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SCALLOP: Few-Step Boltzmann Generators via Scalable Likelihood Flow Maps. Joint sample generation and likelihood estimation with Hutchinson-free likelihood distillation." />
+    <meta name="theme-color" content="#7A2E6A" />
+    <title>SCALLOP: Few-Step Boltzmann Generators via Scalable Likelihood Flow Maps</title>
+    <link rel="icon" type="image/png" href="./static/images/scallop-yellow.png" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <script src="./static/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#abstract">Skip to abstract</a>
+    <main>
+      <header class="hero">
+        <h1>
+          <span class="project-name"><img src="./static/images/scallop-yellow.png" width="64" height="64" alt="Scallop shell" /> SCALLOP</span>
+          <span class="project-title">Few-Step Boltzmann Generators via<br class="desktop-break" /> Scalable Likelihood Flow Maps</span>
+        </h1>
+        <div class="authors" aria-label="Authors">
+          <span><a href="https://tonyauyeung.github.io/">RuiKang OuYang</a><sup>1,*</sup></span>
+          <span><a href="https://ksnxr.github.io/">Hanlin Yu</a><sup>2,†</sup></span>
+          <span><a href="https://keely-ai.github.io/">Xinyue Ai</a><sup>3,†</sup></span>
+          <span><a href="https://kellyyutonghe.github.io/">Yutong He</a><sup>4</sup></span>
+          <span><a href="https://nmboffi.github.io/">Nicholas M. Boffi</a><sup>4</sup></span>
+          <span><a href="https://www.cs.cmu.edu/~pradeepr/">Pradeep Ravikumar</a><sup>4</sup></span>
+          <span><a href="https://jmhl.org/">José Miguel Hernández-Lobato</a><sup>1</sup></span>
+          <span><a href="https://msimchowitz.github.io/">Max Simchowitz</a><sup>4,5</sup></span>
+          <span><a href="https://bkmi.github.io/">Benjamin Kurt Miller</a><sup>6</sup></span>
+          <span><a href="https://l-omar-chehab.github.io/">Omar Chehab</a><sup>4</sup></span>
+        </div>
+        <div class="affiliations" aria-label="Affiliations">
+          <span><sup>1</sup> University of Cambridge</span>
+          <span><sup>2</sup> University of Helsinki</span>
+          <span><sup>3</sup> Peking University</span>
+          <span><sup>4</sup> Carnegie Mellon University</span>
+          <span><sup>5</sup> Amazon FAR</span>
+          <span><sup>6</sup> FAIR at Meta</span>
+        </div>
+        <p class="author-note"><sup>*</sup> Correspondence: <a href="mailto:ro352@cam.ac.uk">ro352@cam.ac.uk</a> <span><sup>†</sup> Equal contributions</span></p>
+        <p class="venue">NeurIPS 2026</p>
+        <nav class="resource-links" aria-label="Project resources">
+          <a class="button button-primary" href="https://arxiv.org/pdf/2606.29110">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg>
+            Paper
+          </a>
+          <a class="button" href="https://arxiv.org/abs/2606.29110"><span class="arxiv-icon" aria-hidden="true">χ</span> arXiv</a>
+          <a class="button" href="https://neurips.cc/virtual/2026/loc/sydney/poster/154720">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 3h16v13H4zM12 16v5M7 21h10M7 7h10M7 11h6" /></svg>
+            NeurIPS
+          </a>
+          <a class="button" href="https://openreview.net/forum?id=BW8H7viD5K#discussion">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 4H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4l4 3v-3h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zM7 8h10M7 12h7" /></svg>
+            OpenReview
+          </a>
+          <a class="button" href="https://github.com/tonyauyeung/scallop">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.07c-3.1.67-3.76-1.32-3.76-1.32-.51-1.28-1.24-1.62-1.24-1.62-1.01-.69.07-.68.07-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.59 1.21 3.22.92.1-.72.39-1.21.71-1.49-2.48-.28-5.08-1.24-5.08-5.49 0-1.21.43-2.2 1.15-2.97-.12-.28-.5-1.41.11-2.94 0 0 .94-.3 3.05 1.14a10.63 10.63 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.66.11 2.94.72.77 1.15 1.76 1.15 2.97 0 4.26-2.61 5.2-5.09 5.48.4.35.75 1.02.75 2.06v3.06c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+            Code
+          </a>
+        </nav>
+      </header>
+
+      <section class="teaser content" aria-label="SCALLOP animation">
+        <figure>
+          <video id="scallop-animation" controls muted loop playsinline preload="metadata" poster="./static/images/scallop-poster.jpg" width="1920" height="1080" aria-label="SCALLOP molecular sampling animation" aria-describedby="teaser-caption">
+            <source src="./static/media/scallop.mp4" type="video/mp4" />
+            <a href="./static/media/scallop.mp4">Watch the SCALLOP animation (MP4)</a>.
+          </video>
+          <figcaption id="teaser-caption"><strong>Few-step molecular generation, with likelihoods along the way.</strong><br />From Gaussian noise to peptide conformations: SCALLOP jointly predicts samples and their log densities, enabling importance resampling.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section section-muted" id="abstract" aria-labelledby="abstract-heading">
+        <div class="content prose">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>Recent progress in flow-based generative modeling has led to models that output high-quality samples while using only a small number of function evaluations. However, at present, there is a lack of similar advances in estimating the model likelihood. In particular, most existing methods either rely on restrictive architectures that enable exact calculations, or use stochastic approximations such as Hutchinson’s trace estimator that introduce substantial variance.</p>
+          <p>In this work, we introduce <em>SCAlable LikeLihood distillation of flOw maPs</em> (<strong>SCALLOP</strong>). SCALLOP builds on the recently proposed <a href="#ref-f2d2">F2D2 (Ai et al.)</a>, a likelihood flow map model that can generate samples and their densities in a small number of function evaluations. While F2D2 uses Hutchinson’s estimator during training, we introduce an alternative and more scalable likelihood distillation objective that is <strong>Hutchinson-free</strong> and admits a vectorized formulation.</p>
+          <p>Empirically, we demonstrate the effectiveness of SCALLOP as a Boltzmann generator in molecular science, and further validate its benefit on image datasets. SCALLOP significantly reduces both training variance and training time while consistently improving performance compared to F2D2, and is competitive with the state-of-the-art while achieving up to <strong>10× inference speedup</strong> over the fastest baseline.</p>
+        </div>
+      </section>
+
+      <section class="section content" id="method" aria-labelledby="method-heading">
+        <h2 id="method-heading">Method</h2>
+        <p class="section-intro">Samples and likelihoods, learned together.</p>
+        <div class="method-flow" aria-label="Gaussian noise passes through a likelihood flow map to produce molecular samples and their estimated log densities.">
+          <div class="flow-stage">
+            <h3>Gaussian noise</h3>
+            <div class="noise-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="math">x<sub>0</sub> ∼ 𝒩(0, I)</p>
+          </div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-stage">
+            <h3>Likelihood flow map</h3>
+            <svg class="flow-visual" viewBox="0 0 240 110" fill="none" aria-hidden="true"><path d="M5 16C70-18 155 105 235 35" stroke="#AA7BE0"/><path d="M5 28C70-6 155 117 235 47" stroke="#7A2E6A"/><path d="M5 40C70 6 155 129 235 59" stroke="#E05260"/><path d="M5 52C70 18 155 141 235 71" stroke="#FF9F00"/></svg>
+            <p class="math">Ψ<sub>θ</sub>(x<sub>t</sub>, t, s)</p>
+          </div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-stage">
+            <h3>Samples + log density</h3>
+            <img class="molecule" src="./static/images/alanine-dipeptide.png" width="669" height="365" loading="lazy" alt="Ball-and-stick structure of alanine dipeptide" />
+            <p class="math">x<sub>s</sub>, log p<sub>s</sub>(x<sub>s</sub>)</p>
+          </div>
+        </div>
+        <div class="method-steps">
+          <div><h3>Pretrain the velocity</h3><p>Learn a velocity field that transports Gaussian noise toward the data distribution. Use this pretrained model as the teacher for a likelihood flow map.</p></div>
+          <div><h3>Conditional Divergence Matching:<br />Distill without Hutchinson</h3><p>Replace stochastic divergence estimation with conditional divergence matching: a vectorized objective that reduces training variance and computation.</p></div>
+          <div><h3>Generate and reweight</h3><p>Update the sample and its estimated log density together in a few network evaluations. Use these likelihoods for self-normalized importance sampling.</p></div>
+        </div>
+        <p class="method-note">The key change is the likelihood training objective. At inference, a shared network predicts the sample update and log-density change without computing a full Jacobian.</p>
+        <details class="method-formulation">
+          <summary id="cdm-heading"><h3>Vectorized conditional divergence matching</h3><span class="disclosure-hint">View formulation</span></summary>
+          <div class="formulation-content">
+          <p>For the linear interpolation <span class="math">x<sub>t</sub> = (1 − t)x<sub>0</sub> + tx<sub>1</sub></span>, with Gaussian noise <span class="math">x<sub>0</sub> ∼ 𝒩(0, I)</span> and a data sample <span class="math">x<sub>1</sub> ∼ p<sub>data</sub></span>, SCALLOP trains a vector-valued predictor <span class="math">D<sub>θ</sub> ∈ ℝ<sup>d</sup></span> using:</p>
+          <div class="equation-scroll" role="region" aria-label="Vectorized conditional divergence matching objective" tabindex="0">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <msub><mi>ℒ</mi><mtext>CDM-v</mtext></msub><mo stretchy="false">(</mo><mi>θ</mi><mo>;</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo>
+                  <msub><mi>𝔼</mi><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></msub>
+                  <mo>[</mo>
+                  <msup>
+                    <mrow>
+                      <mo>‖</mo>
+                      <msub><mi>D</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>,</mo><mi>t</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo>
+                      <mfrac><msub><mi>x</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>−</mo><mi>t</mi></mrow></mfrac><mo>⊙</mo>
+                      <mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>−</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo>
+                      <mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi>t</mi></mrow></mfrac><msub><mn>𝟏</mn><mi>d</mi></msub>
+                      <mo>‖</mo>
+                    </mrow>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>]</mo><mo>.</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">\mathcal{L}_{\mathrm{CDM\text{-}v}}(\theta;t)=\mathbb{E}_{x_0,x_1}\left[\left\|D_\theta(x_t,t,t)+\frac{x_0}{1-t}\odot\bigl(v_t(x_t)-(x_1-x_0)\bigr)-\frac{1}{1-t}\mathbf{1}_d\right\|^2\right].</annotation>
+              </semantics>
+            </math>
+          </div>
+          <p>Here, <span class="math">⊙</span> is elementwise multiplication, <span class="math">1<sub>d</sub></span> is the all-ones vector, and <span class="math">v<sub>t</sub></span> is the pretrained velocity teacher. This objective replaces Hutchinson’s stochastic trace estimator with a coordinatewise training signal. The vector output targets the negative diagonal of the velocity Jacobian; summing its entries gives the scalar log-density-change prediction.</p>
+          <div class="equation-scroll equation-secondary" role="region" aria-label="Predicted log-density change from the vector output" tabindex="0">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mover accent="true"><mrow><mi>Δ</mi><mi mathvariant="normal">log</mi><mi>p</mi></mrow><mo stretchy="true">^</mo></mover><mo>=</mo><mo stretchy="false">(</mo><mi>s</mi><mo>−</mo><mi>t</mi><mo stretchy="false">)</mo>
+                  <munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>d</mi></munderover>
+                  <msub><mi>D</mi><mrow><mi>θ</mi><mo>,</mo><mi>j</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>,</mo><mi>t</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo><mo>.</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">\widehat{\Delta\log p}=(s-t)\sum_{j=1}^{d}D_{\theta,j}(x_t,t,s).</annotation>
+              </semantics>
+            </math>
+          </div>
+          <p class="formulation-note">In practice, the CDM-v loss is weighted by (1 − t) and combined with flow matching and self-distillation. Training samples t from [0, 1 − ε], with ε = 10<sup>−5</sup>, to avoid the endpoint singularity.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section section-muted" id="results" aria-labelledby="results-heading">
+        <div class="content">
+          <h2 id="results-heading">Results</h2>
+          <p class="section-intro">Faster likelihood evaluation. More stable training.</p>
+          <p>On alanine systems, SCALLOP improves on <a href="#ref-f2d2">F2D2</a> across all reported metrics and achieves competitive performance with state-of-the-art Boltzmann generators.</p>
+
+          <h3 class="result-heading">Molecular sampling</h3>
+          <p>Full results from the paper’s molecular benchmark, evaluated using self-normalized importance sampling. Values are mean ± standard deviation over three random seeds with 200,000 samples. <strong>Bold</strong> marks the best result; <span class="second-best">underlining</span> marks the second best.</p>
+          <div class="table-scroll" role="region" aria-label="Complete molecular benchmark results; scroll horizontally for all methods" tabindex="0">
+            <table class="results-table molecular-table" id="molecular-results">
+              <caption class="visually-hidden">Full molecular benchmark from the paper: all five methods and all four metrics for ALA-2, ALA-3, ALA-4, and ALA-6. Best values are bold; second-best values are underlined.</caption>
+              <thead><tr><th scope="col">System</th><th scope="col">Metric</th><th scope="col">SBG-IS</th><th scope="col">FALCON</th><th scope="col">FALCON-A</th><th scope="col">F2D2</th><th scope="col" class="ours">SCALLOP</th></tr></thead>
+              <tbody>
+                <tr><th scope="rowgroup" rowspan="4">ALA-2<span class="dimension">d = 66</span></th><th scope="row">ESS ↑</th><td>0.030 <span class="uncertainty">± 0.012</span></td><td>0.067 <span class="uncertainty">± 0.013</span></td><td><strong>0.097</strong> <span class="uncertainty">± 0.007</span></td><td>0.066 <span class="uncertainty">± 0.001</span></td><td class="ours"><span class="second-best">0.088</span> <span class="uncertainty">± 0.001</span></td></tr>
+                <tr><th scope="row">ℰ-W<sub>2</sub> ↓</th><td>0.873 <span class="uncertainty">± 0.338</span></td><td><strong>0.225</strong> <span class="uncertainty">± 0.104</span></td><td><span class="second-best">0.512</span> <span class="uncertainty">± 0.038</span></td><td>0.958 <span class="uncertainty">± 0.114</span></td><td class="ours">0.555 <span class="uncertainty">± 0.116</span></td></tr>
+                <tr><th scope="row">𝕋-W<sub>2</sub> ↓</th><td>0.439 <span class="uncertainty">± 0.129</span></td><td>0.402 <span class="uncertainty">± 0.021</span></td><td><strong>0.180</strong> <span class="uncertainty">± 0.005</span></td><td>0.383 <span class="uncertainty">± 0.022</span></td><td class="ours"><span class="second-best">0.310</span> <span class="uncertainty">± 0.027</span></td></tr>
+                <tr><th scope="row">NFE</th><td>1</td><td>4</td><td>4</td><td>4</td><td class="ours">4</td></tr>
+              </tbody>
+              <tbody>
+                <tr><th scope="rowgroup" rowspan="4">ALA-3<span class="dimension">d = 99</span></th><th scope="row">ESS ↑</th><td>0.052 <span class="uncertainty">± 0.013</span></td><td>0.077 <span class="uncertainty">± 0.004</span></td><td><strong>0.104</strong> <span class="uncertainty">± 0.004</span></td><td>0.079 <span class="uncertainty">± 0.001</span></td><td class="ours"><span class="second-best">0.088</span> <span class="uncertainty">± 0.001</span></td></tr>
+                <tr><th scope="row">ℰ-W<sub>2</sub> ↓</th><td><span class="second-best">0.758</span> <span class="uncertainty">± 0.506</span></td><td><strong>0.544</strong> <span class="uncertainty">± 0.013</span></td><td>1.385 <span class="uncertainty">± 0.182</span></td><td>2.155 <span class="uncertainty">± 0.033</span></td><td class="ours">1.596 <span class="uncertainty">± 0.028</span></td></tr>
+                <tr><th scope="row">𝕋-W<sub>2</sub> ↓</th><td>0.502 <span class="uncertainty">± 0.016</span></td><td>0.452 <span class="uncertainty">± 0.011</span></td><td>0.343 <span class="uncertainty">± 0.004</span></td><td><span class="second-best">0.219</span> <span class="uncertainty">± 0.001</span></td><td class="ours"><strong>0.212</strong> <span class="uncertainty">± 0.001</span></td></tr>
+                <tr><th scope="row">NFE</th><td>1</td><td>8</td><td>8</td><td>8</td><td class="ours">8</td></tr>
+              </tbody>
+              <tbody>
+                <tr><th scope="rowgroup" rowspan="4">ALA-4<span class="dimension">d = 126</span></th><th scope="row">ESS ↑</th><td>0.046 <span class="uncertainty">± 0.014</span></td><td>0.055 <span class="uncertainty">± 0.003</span></td><td><strong>0.094</strong> <span class="uncertainty">± 0.007</span></td><td>0.053 <span class="uncertainty">± 0.001</span></td><td class="ours"><span class="second-best">0.067</span> <span class="uncertainty">± 0.001</span></td></tr>
+                <tr><th scope="row">ℰ-W<sub>2</sub> ↓</th><td><span class="second-best">1.068</span> <span class="uncertainty">± 0.495</span></td><td><strong>0.686</strong> <span class="uncertainty">± 0.047</span></td><td>2.929 <span class="uncertainty">± 0.068</span></td><td>4.209 <span class="uncertainty">± 0.066</span></td><td class="ours">1.545 <span class="uncertainty">± 0.033</span></td></tr>
+                <tr><th scope="row">𝕋-W<sub>2</sub> ↓</th><td><span class="second-best">0.969</span> <span class="uncertainty">± 0.067</span></td><td><strong>0.858</strong> <span class="uncertainty">± 0.077</span></td><td>1.094 <span class="uncertainty">± 0.034</span></td><td>1.435 <span class="uncertainty">± 0.023</span></td><td class="ours">1.399 <span class="uncertainty">± 0.039</span></td></tr>
+                <tr><th scope="row">NFE</th><td>1</td><td>8</td><td>8</td><td>8</td><td class="ours">8</td></tr>
+              </tbody>
+              <tbody>
+                <tr><th scope="rowgroup" rowspan="4">ALA-6<span class="dimension">d = 189</span></th><th scope="row">ESS ↑</th><td>0.034 <span class="uncertainty">± 0.015</span></td><td><span class="second-best">0.060</span> <span class="uncertainty">± 0.017</span></td><td><strong>0.077</strong> <span class="uncertainty">± 0.007</span></td><td>0.033 <span class="uncertainty">± 0.001</span></td><td class="ours">0.042 <span class="uncertainty">± 0.001</span></td></tr>
+                <tr><th scope="row">ℰ-W<sub>2</sub> ↓</th><td><span class="second-best">1.021</span> <span class="uncertainty">± 0.239</span></td><td><strong>0.892</strong> <span class="uncertainty">± 0.311</span></td><td>1.211 <span class="uncertainty">± 0.105</span></td><td>10.140 <span class="uncertainty">± 0.065</span></td><td class="ours">5.845 <span class="uncertainty">± 0.101</span></td></tr>
+                <tr><th scope="row">𝕋-W<sub>2</sub> ↓</th><td>1.431 <span class="uncertainty">± 0.085</span></td><td>1.256 <span class="uncertainty">± 0.132</span></td><td>1.163 <span class="uncertainty">± 0.112</span></td><td><span class="second-best">1.143</span> <span class="uncertainty">± 0.039</span></td><td class="ours"><strong>1.120</strong> <span class="uncertainty">± 0.014</span></td></tr>
+                <tr><th scope="row">NFE</th><td>1</td><td>16</td><td>16</td><td>16</td><td class="ours">16</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">ESS is the effective sample size (higher is better); ℰ-W<sub>2</sub> and 𝕋-W<sub>2</sub> are the 2-Wasserstein distances for energy and torsional-angle distributions (lower is better). NFE is the number of function evaluations. The SBG-IS normalizing-flow baseline comes from <a href="#ref-sbg">SBG (Tan et al.)</a>. SBG-IS, FALCON, and FALCON-A values are taken from <a href="#ref-falcon">FALCON (Rehman et al.)</a>, as in the <a href="https://arxiv.org/pdf/2606.29110">paper</a>.</p>
+
+          <h3 class="result-heading">Training stability and efficiency</h3>
+          <figure class="paper-figure training-figure">
+            <a href="./static/images/training-stability.png" target="_blank" rel="noopener" aria-label="Open the training stability figure at full size"><img src="./static/images/training-stability.png" width="2346" height="710" loading="lazy" alt="ALA-2 training comparison: SCALLOP has lower loss-gradient variance, higher gradient signal-to-noise ratio, and converges to a higher effective sample size than F2D2." /></a>
+            <figcaption><strong>More stable training on ALA-2.</strong> Lower gradient variance and a stronger signal-to-noise ratio lead to better effective sample size as training progresses. <span class="figure-hint">Select the figure to view full size.</span></figcaption>
+          </figure>
+
+          <p>Sampling and density evaluation are up to <strong>10× faster than the normalizing-flow baseline from <a href="#ref-sbg">SBG</a></strong> and <strong>100× faster than <a href="#ref-falcon">FALCON</a></strong>.</p>
+          <figure class="paper-figure">
+            <a href="./static/images/runtime-comparison.png" target="_blank" rel="noopener" aria-label="Open the training and inference time figure at full size"><img src="./static/images/runtime-comparison.png" width="1627" height="894" loading="lazy" alt="Training and inference GPU-hours across ALA-2, ALA-3, ALA-4, and ALA-6. SCALLOP and F2D2 have nearly identical inference costs, below TarFlow and FALCON." /></a>
+            <figcaption><strong>Training and inference time.</strong> Benchmarked on one NVIDIA RTX PRO 6000. Inference includes generating 200,000 samples and their densities. Training is roughly 10% faster than F2D2 for the same number of updates. <span class="figure-hint">Select the figure to view full size.</span></figcaption>
+          </figure>
+
+          <h3 class="result-heading">Beyond molecules: CelebA-64</h3>
+          <p>The same objective improves per-sample likelihood accuracy on image data. SCALLOP consistently reduces the mean absolute error in bits per dimension (BPD) relative to a 1,024-step teacher, while retaining competitive sample quality.</p>
+          <div class="table-scroll" role="region" aria-label="Complete CelebA-64 benchmark results; scroll horizontally for all methods and metrics" tabindex="0">
+            <table class="results-table image-table" id="image-results">
+              <caption class="visually-hidden">Full CelebA-64 benchmark from the paper: NLL, absolute deviation from reference BPD, per-sample BPD error, and FID for Flow map, F2D2, and SCALLOP. Best values are bold.</caption>
+              <colgroup span="1"></colgroup><colgroup span="4"></colgroup><colgroup span="4"></colgroup><colgroup span="4"></colgroup>
+              <thead>
+                <tr><th scope="col" rowspan="2">Steps</th><th scope="colgroup" colspan="4">Flow map</th><th scope="colgroup" colspan="4">F2D2</th><th scope="colgroup" colspan="4" class="ours">SCALLOP</th></tr>
+                <tr><th scope="col">NLL</th><th scope="col">|Δ| ↓</th><th scope="col">Err ↓</th><th scope="col">FID ↓</th><th scope="col">NLL</th><th scope="col">|Δ| ↓</th><th scope="col">Err ↓</th><th scope="col">FID ↓</th><th scope="col" class="ours">NLL</th><th scope="col" class="ours">|Δ| ↓</th><th scope="col" class="ours">Err ↓</th><th scope="col" class="ours">FID ↓</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>-69.83</td><td>71.58</td><td>71.64</td><td>12.96</td><td>1.64</td><td><strong>0.11</strong></td><td>0.53</td><td>6.94</td><td class="ours">1.60</td><td class="ours">0.15</td><td class="ours"><strong>0.17</strong></td><td class="ours"><strong>6.91</strong></td></tr>
+                <tr><th scope="row">2</th><td>-32.72</td><td>34.47</td><td>34.46</td><td>6.32</td><td>1.73</td><td><strong>0.02</strong></td><td>0.33</td><td>3.86</td><td class="ours">1.69</td><td class="ours">0.06</td><td class="ours"><strong>0.12</strong></td><td class="ours"><strong>3.81</strong></td></tr>
+                <tr><th scope="row">4</th><td>-14.89</td><td>16.64</td><td>16.59</td><td>4.04</td><td>1.75</td><td><strong>0.00</strong></td><td>0.24</td><td>2.75</td><td class="ours">1.75</td><td class="ours"><strong>0.00</strong></td><td class="ours"><strong>0.12</strong></td><td class="ours"><strong>2.70</strong></td></tr>
+                <tr><th scope="row">8</th><td>-6.78</td><td>8.53</td><td>8.45</td><td>3.33</td><td>1.64</td><td>0.11</td><td>0.18</td><td>2.41</td><td class="ours">1.68</td><td class="ours"><strong>0.07</strong></td><td class="ours"><strong>0.10</strong></td><td class="ours"><strong>2.37</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">All models use Lagrangian self-distillation (LSD). NLL is measured in bits per dimension (BPD); |Δ| is its absolute deviation from the reference BPD; Err is the mean absolute per-sample BPD error against the teacher. The reference flow-matching model achieves BPD <strong>1.75</strong> with 1,024 Euler steps and FID <strong>2.48</strong> with 200 Euler steps. Best results are bold. On CelebA-64, SCALLOP’s loss computation takes 83.1% of F2D2’s wall-clock time.</p>
+        </div>
+      </section>
+
+      <section class="section content" id="references" aria-labelledby="references-heading">
+        <h2 id="references-heading">References</h2>
+        <ul class="references-list">
+          <li id="ref-f2d2">Xinyue Ai et al. <a href="https://arxiv.org/abs/2512.02636"><cite>Joint Distillation for Fast Likelihood Evaluation and Sampling in Flow-based Models</cite></a> (F2D2). ICLR 2026.</li>
+          <li id="ref-sbg">Charlie B. Tan et al. <a href="https://arxiv.org/abs/2502.18462"><cite>Scalable Equilibrium Sampling with Sequential Boltzmann Generators</cite></a> (SBG).</li>
+          <li id="ref-falcon">Danyal Rehman et al. <a href="https://arxiv.org/abs/2512.09914"><cite>FALCON: Few-step Accurate Likelihoods for Continuous Flows</cite></a>. ICLR 2026.</li>
+        </ul>
+      </section>
+
+      <section class="section content" id="bibtex" aria-labelledby="bibtex-heading">
+        <div class="citation-heading"><h2 id="bibtex-heading">BibTeX</h2><button class="copy-button" id="copy-citation" type="button" hidden>Copy citation</button></div>
+        <p>If you find our work useful, please cite:</p>
+        <pre><code id="citation">@inproceedings{ouyang2026fewstep,
+  title = {Few-Step Boltzmann Generators via Scalable Likelihood Flow Maps},
+  author = {OuYang, RuiKang and Yu, Hanlin and Ai, Xinyue and He, Yutong and Boffi, Nicholas Matthew and Ravikumar, Pradeep and Hern{\'a}ndez-Lobato, Jos{\'e} Miguel and Simchowitz, Max and Miller, Benjamin Kurt and Chehab, Omar},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year = {2026},
+  url = {https://openreview.net/forum?id=BW8H7viD5K},
+}</code></pre>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer class="content">
+      <p><img src="./static/images/scallop-yellow.png" width="22" height="22" alt="" /> <strong>SCALLOP</strong> <span>Few-Step Boltzmann Generators via Scalable Likelihood Flow Maps</span></p>
+      <a href="mailto:ro352@cam.ac.uk">Contact</a>
+    </footer>
+  </body>
+</html>

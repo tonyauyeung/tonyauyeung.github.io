@@ -6,6 +6,7 @@ on:
       - master
       - main
     paths:
+      - "scallop/**"
       - "assets/**"
       - "bin/build-resume.sh"
       - "**.tex"
@@ -36,6 +37,7 @@ on:
       - master
       - main
     paths:
+      - "scallop/**"
       - "assets/**"
       - "bin/build-resume.sh"
       - "**.tex"
