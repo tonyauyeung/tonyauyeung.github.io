@@ -22,7 +22,7 @@ academic_service:
     - role: conference reviewer
       details: ICLR (2025–2027), ICML (2026), NeurIPS (2025–2026), AISTATS (2027)
       items:
-        - award: silver reviewer🥈 @ ICML (2026)
+        - award: silver reviewer🥈 @ ICML (2026), top reviewer🥇 @ NeurIPS (2026)
     - role: workshop reviewer
       details: >-
         [DELTA@ICLR](https://delta-workshop.github.io/DeLTa2026/) (2025–2026),
@@ -35,11 +35,6 @@ academic_service:
     - role: organizer
       details: "[MolSS reading group](https://molss-reading-group.github.io/MolSS/) (Lead organizer)"
 social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
 
 # latest_posts:
 #   enabled: true
@@ -250,7 +245,7 @@ I am always open to discussion and collaboration, feel free to reach out!
 <details class="about-research-box mt-3 about-research-box-gap-narrow" markdown="0">
   <summary class="about-research-box-title">news</summary>
   <ul>
-    <li><strong>2026-09:</strong> Two papers (<a href="https://arxiv.org/abs/2606.29110">Scallop</a> and <a href="https://arxiv.org/abs/2605.26850">stNCE</a>) are accepted by NeurIPS 2026! See you in Australia 🐨 🦘 🏝️ </li>
+    <li><strong>2026-09:</strong> Two papers (<a href="https://arxiv.org/abs/2606.29110">Scallop</a> and <a href="https://arxiv.org/abs/2605.26850">stNCE</a>) are accepted by NeurIPS 2026, and I'm awarded as a Top Reviewer!! See you in Australia 🐨 🦘 🏝️ </li>
     <li><strong>2026-07:</strong> I'm interning at <a href="https://anewbt.com">AnewLabs</a>, an aidd startup spinned-off from Seed@ByteDance recently. Working on equilibrium sampling model for proteins.</li>
   </ul>
 </details>

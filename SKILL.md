@@ -12,7 +12,7 @@ Use this as the default operating guide for edits and troubleshooting.
 
 Use Jekyll-native workflows for this repo unless the user asks for an alternative build system.
 
-- Local content lives in Markdown/Liquid files under `_pages`, `_posts`, `_projects`, `_news`, `_layouts`, `_includes`, and `_data`.
+- Local content lives in Markdown/Liquid files under `_pages`, `_posts`, `_projects`, `_layouts`, `_includes`, and `_data`.
 - Styling and assets are in `_sass`, `assets`, and image/data directories.
 - `_site` is generated output and should not be edited manually.
 - Keep generated artifacts out of source edits unless explicitly requested.
@@ -23,7 +23,7 @@ Use Jekyll-native workflows for this repo unless the user asks for an alternativ
 
 - Add or edit pages in `_pages/`.
 - Add blog posts in `_posts/` using `YYYY-MM-DD-title.md`.
-- Add projects in `_projects/` and news items in `_news/`.
+- Add projects in `_projects/` and edit homepage news in the news section of `_pages/about.md`.
 - Update global metadata, plugin options, and URL behavior in `_config.yml`.
 - Update publication metadata in `_bibliography/papers.bib`.
 - Keep YAML front matter consistent (for example: `layout`, `title`, `date`, `permalink` as needed).

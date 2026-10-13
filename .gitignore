@@ -6,6 +6,7 @@ _site
 .DS_store
 .ruby-version
 .tweet-cache
+.pip_packages/
 Gemfile.lock
 assets/libs/
 # LaTeX intermediates from CV build (Tony_CV.pdf is kept)

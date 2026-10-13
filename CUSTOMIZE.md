@@ -19,9 +19,8 @@ The project is structured as follows, focusing on the main components that you w
 │   ├── 📄 repositories.yml: users and repositories info in YAML format
 │   └── 📄 socials.yml: your social media and contact info in YAML format
 ├── 📂 _includes/: contains code parts that are included in the main HTML file
-│   └── 📄 news.liquid: defines the news section layout in the about page
+│   └── 📄 news.liquid: defines the legacy standalone news page layout
 ├── 📂 _layouts/: contains the layouts to choose from in the frontmatter of the Markdown files
-├── 📂 _news/: the news that will appear in the news section in the about page
 ├── 📂 _pages/: contains the pages of the website
 |   └── 📄 404.md: 404 page (page not found)
 ├── 📂 _posts/: contains the blog posts
@@ -69,11 +68,11 @@ You can create new projects by adding new Markdown files in the [\_projects](_pr
 
 ## Adding some news
 
-You can add news in the about page by adding new Markdown files in the [\_news](_news/) directory. There are currently two types of news: inline news and news with a link. News with a link take you to a new page while inline news are displayed directly in the about page. The easiest way to create yours is to copy an existing news and modify it.
+Edit the news `<details>` section in [\_pages/about.md](_pages/about.md). Add or update an HTML `<li>` entry inside its `<ul>`, including the date and announcement text.
 
 ## Adding Collections
 
-This Jekyll theme implements `collections` to let you break up your work into categories. The theme comes with two default collections: `news` and `projects`. Items from the `news` collection are automatically displayed on the home page. Items from the `projects` collection are displayed on a responsive grid on projects page.
+This website uses a `projects` collection to display project pages on a responsive grid. Homepage news is edited directly in `_pages/about.md`.
 
 You can easily create your own collections, apps, short stories, courses, or whatever your creative work is. To do this, edit the collections in the [\_config.yml](_config.yml) file, create a corresponding folder, and create a landing page for your collection, similar to [\_pages/projects.md](_pages/projects.md).
 
@@ -160,7 +159,6 @@ Since this template have a lot of content, you may want to remove some of it. Th
 
 ```yml
 excludes:
-  - _news/announcement_*.md
   - _pages/blog.md
   - _posts/
   - _projects/?_project.md
@@ -192,12 +190,7 @@ You can also:
 
 ### Removing the news section
 
-To remove the news section, you can:
-
-- delete the [\_news](_news/) directory
-- delete the file [\_includes/news.liquid](_includes/news.liquid) and the references to it in the [\_pages/about.md](_pages/about.md)
-- remove the `announcements` part in [\_pages/about.md](_pages/about.md)
-- remove the news part in the `Collections` section in the [\_config.yml](_config.yml) file
+Remove the news `<details>` block from [\_pages/about.md](_pages/about.md). The standalone `/news/` page is separate and can be removed by deleting [\_pages/news.md](_pages/news.md) if it is no longer needed.
 
 ### Removing the projects page
 
@@ -228,9 +221,7 @@ You can also:
 - delete [\_includes/bib_search.liquid](_includes/bib_search.liquid)
 - delete [\_includes/citation.liquid](_includes/citation.liquid)
 - delete [\_includes/selected_papers.liquid](_includes/selected_papers.liquid)
-- delete [\_plugins/google-scholar-citations.rb](_plugins/google-scholar-citations.rb)
 - delete [\_plugins/hide-custom-bibtex.rb](_plugins/hide-custom-bibtex.rb)
-- delete [\_plugins/inspirehep-citations.rb](_plugins/inspirehep-citations.rb)
 - remove the `jekyll-scholar` gem from the [Gemfile](Gemfile) and the `plugins` section in [\_config.yml](_config.yml)
 
 ### Removing the repositories page
@@ -239,19 +230,6 @@ To remove the repositories, you can:
 
 - delete the repositories page [\_pages/repositories.md](_pages/repositories.md)
 - delete [\_includes/repository/](_includes/repository/) directory
-
-## Adding Token for Lighthouse Badger
-
-To add secrets for [lighthouse-badger](https://github.com/alshedivat/al-folio/actions/workflows/lighthouse-badger.yml), create a [personal access token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) and add it as a [secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) named `LIGHTHOUSE_BADGER_TOKEN` to your repository. The [lighthouse-badger documentation](https://github.com/MyActionWay/lighthouse-badger-workflows#lighthouse-badger-easyyml) specifies using an environment variable, but using it as a secret is more secure and appropriate for a PAT.
-
-Also In case you face the error: "Input required and not supplied: token" in the Lighthouse Badger action, this solution resolves it.
-
-### Personal Access Token (fine-grained) Permissions for Lighthouse Badger:
-
-- **contents**: access: read and write
-- **metadata**: access: read-only
-
-Due to the necessary permissions (PAT and others mentioned above), it is recommended to use it as a secret rather than an environment variable.
 
 ## Customizing fonts, spacing, and more
 
@@ -278,7 +256,7 @@ In this folder you need to store your file in the same format as you would in `_
 - It will only upload files which follow the pattern `yyyy-mm-dd-title.md`
   - This means that only markdown files will be posted
   - It means that any markdown which do not follow this pattern will not be posted
-- The scheduler works by moving posts from the `_scheduled/` directory to `_posts/`, it will not post to folders like `_projects/` or `_news/`
+- The scheduler works by moving posts from the `_scheduled/` directory to `_posts/`, it will not post to other collections such as `_projects/`
 - The date in the name of the file is the day that file will be uploaded on
   - `2024-08-27-file1.md` will not be posted before or after 27-August-2024 (Scheduler only works for posts scheduled on the present day)
   - `2025-08-27-file2.md` will be posted exactly on 27-August-2025

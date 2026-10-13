@@ -54,7 +54,7 @@ def escape_href(url: str) -> str:
 
 def normalize_text(text: str, *, strip_edges: bool = True) -> str:
     text = text.replace("\u2013", "--").replace("\u2014", "---")
-    text = text.replace("🥈", "")
+    text = text.translate(str.maketrans("", "", "🥇🥈🥉"))
     text = re.sub(r"\s+", " ", text)
     return text.strip() if strip_edges else text
 

@@ -141,11 +141,6 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  # news:
-  #   defaults:
-  #     layout: post
-  #   output: true
-  #   permalink: /:collection/:title/
   projects:
     output: true
     permalink: /:collection/:title/
@@ -184,8 +179,6 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - assets/jupyter/blog.ipynb
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/
