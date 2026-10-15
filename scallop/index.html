@@ -108,10 +108,53 @@
           <div><h3>Generate and reweight</h3><p>Update the sample and its estimated log density together in a few network evaluations. Use these likelihoods for self-normalized importance sampling.</p></div>
         </div>
         <p class="method-note">The key change is the likelihood training objective. At inference, a shared network predicts the sample update and log-density change without computing a full Jacobian.</p>
-        <details class="method-formulation">
+        <details class="method-formulation" open>
           <summary id="cdm-heading"><h3>Vectorized conditional divergence matching</h3><span class="disclosure-hint">View formulation</span></summary>
           <div class="formulation-content">
-          <p>For the linear interpolation <span class="math">x<sub>t</sub> = (1 − t)x<sub>0</sub> + tx<sub>1</sub></span>, with Gaussian noise <span class="math">x<sub>0</sub> ∼ 𝒩(0, I)</span> and a data sample <span class="math">x<sub>1</sub> ∼ p<sub>data</sub></span>, SCALLOP trains a vector-valued predictor <span class="math">D<sub>θ</sub> ∈ ℝ<sup>d</sup></span> using:</p>
+          <p><strong>Key observation 1: chain rule.</strong> Along a flow trajectory <span class="math">dx<sub>t</sub>/dt = v<sub>t</sub>(x<sub>t</sub>)</span>, the instantaneous change-of-variables formula relates the negative divergence to the total derivative of the transported log density. The chain rule then decomposes this derivative into:</p>
+          <div class="equation-scroll" role="region" aria-label="Negative divergence as the total log-density derivative, decomposed into Stein score times velocity plus time score" tabindex="0">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mo>−</mo><mi>∇</mi><mo>·</mo><msub><mi>v</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>=</mo>
+                  <mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mi>t</mi></mrow></mfrac><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>=</mo>
+                  <mi>∇</mi><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>·</mo><msub><mi>v</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>+</mo>
+                  <msub><mo>∂</mo><mi>t</mi></msub><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>.</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">-\nabla\cdot v_t(x_t)=\frac{\mathrm{d}}{\mathrm{d}t}\log p_t(x_t)=\nabla\log p_t(x_t)\cdot v_t(x_t)+\partial_t\log p_t(x_t).</annotation>
+              </semantics>
+            </math>
+          </div>
+          <p><strong>Key observation 2: posterior expectations.</strong> Since both the Stein score <span class="math">∇ log p<sub>t</sub>(x<sub>t</sub>)</span> and the time score <span class="math">∂<sub>t</sub> log p<sub>t</sub>(x<sub>t</sub>)</span> can be written as posterior expectations:</p>
+          <div class="equation-scroll" role="region" aria-label="Stein score and time score as posterior expectations of their conditional scores" tabindex="0">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mi>∇</mi><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo>
+                  <mo>=</mo><msub><mi>𝔼</mi><mrow><mi>ξ</mi><mo>∼</mo><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><mi>ξ</mi><mo>|</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></msub><mo>[</mo><mi>∇</mi><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>|</mo><mi>ξ</mi><mo stretchy="false">)</mo><mo>]</mo>
+                  <mspace width="1em"/><mtext>and</mtext><mspace width="1em"/>
+                  <msub><mo>∂</mo><mi>t</mi></msub><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo>
+                  <mo>=</mo><msub><mi>𝔼</mi><mrow><mi>ξ</mi><mo>∼</mo><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><mi>ξ</mi><mo>|</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></msub><mo>[</mo><msub><mo>∂</mo><mi>t</mi></msub><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>|</mo><mi>ξ</mi><mo stretchy="false">)</mo><mo>]</mo><mo>,</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">\nabla\log p_t(x_t)=\mathbb{E}_{\xi\sim p_t(\xi\mid x_t)}[\nabla\log p_t(x_t\mid\xi)]\quad\text{and}\quad\partial_t\log p_t(x_t)=\mathbb{E}_{\xi\sim p_t(\xi\mid x_t)}[\partial_t\log p_t(x_t\mid\xi)],</annotation>
+              </semantics>
+            </math>
+          </div>
+          <p>the log-density change can also be written as a posterior expectation:</p>
+          <div class="equation-scroll" role="region" aria-label="Log-density change as a posterior expectation of conditional Stein score times velocity plus conditional time score" tabindex="0">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mi>t</mi></mrow></mfrac><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>=</mo>
+                  <msub><mi>𝔼</mi><mrow><mi>ξ</mi><mo>∼</mo><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><mi>ξ</mi><mo>|</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></msub><mo>[</mo>
+                  <mi>∇</mi><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>|</mo><mi>ξ</mi><mo stretchy="false">)</mo><mo>·</mo><msub><mi>v</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>+</mo>
+                  <msub><mo>∂</mo><mi>t</mi></msub><mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>|</mo><mi>ξ</mi><mo stretchy="false">)</mo><mo>]</mo><mo>.</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">\frac{\mathrm{d}}{\mathrm{d}t}\log p_t(x_t)=\mathbb{E}_{\xi\sim p_t(\xi\mid x_t)}\left[\nabla\log p_t(x_t\mid\xi)\cdot v_t(x_t)+\partial_t\log p_t(x_t\mid\xi)\right].</annotation>
+              </semantics>
+            </math>
+          </div>
+          <p>For the linear interpolation <span class="math">x<sub>t</sub> = (1 − t)x<sub>0</sub> + tx<sub>1</sub></span>, with independent Gaussian noise <span class="math">x<sub>0</sub> ∼ 𝒩(0, I)</span> and a data sample <span class="math">x<sub>1</sub> ∼ p<sub>data</sub></span>, choosing <span class="math">ξ = x<sub>1</sub></span> gives <span class="math">p<sub>t</sub>(x<sub>t</sub> | x<sub>1</sub>) = 𝒩(tx<sub>1</sub>, (1 − t)<sup>2</sup>I)</span>, whose two conditional scores are available in closed form. Applying this construction coordinatewise, SCALLOP trains a vector-valued predictor <span class="math">D<sub>θ</sub> ∈ ℝ<sup>d</sup></span> using:</p>
           <div class="equation-scroll" role="region" aria-label="Vectorized conditional divergence matching objective" tabindex="0">
             <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
               <semantics>
