@@ -108,7 +108,7 @@
           <div><h3>Generate and reweight</h3><p>Update the sample and its estimated log density together in a few network evaluations. Use these likelihoods for self-normalized importance sampling.</p></div>
         </div>
         <p class="method-note">The key change is the likelihood training objective. At inference, a shared network predicts the sample update and log-density change without computing a full Jacobian.</p>
-        <details class="method-formulation" open>
+        <details class="method-formulation">
           <summary id="cdm-heading"><h3>Vectorized conditional divergence matching</h3><span class="disclosure-hint">View formulation</span></summary>
           <div class="formulation-content">
           <p><strong>Key observation 1: chain rule.</strong> Along a flow trajectory <span class="math">dx<sub>t</sub>/dt = v<sub>t</sub>(x<sub>t</sub>)</span>, the instantaneous change-of-variables formula relates the negative divergence to the total derivative of the transported log density. The chain rule then decomposes this derivative into:</p>
